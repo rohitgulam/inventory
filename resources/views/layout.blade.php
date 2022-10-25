@@ -18,7 +18,7 @@
       </script>
     <title>Inventory Management System</title>
 </head>
-<body>
+<body class="bg-[#E5E5E5]" >
      <!-- component -->
 <div class="w-full h-full">
             <dh-component>
@@ -26,7 +26,7 @@
                     <!-- Sidebar starts -->
                     <!-- Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] -->
                     <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
-                    <div style="min-height: 100vh" class="w-64 absolute sm:relative bg-gray-800 shadow md:h-full flex-col justify-between hidden sm:flex">
+                    <div style="min-height: 100vh; position: fixed;" class="w-64 absolute sm:relative bg-gray-800 shadow md:h-full flex-col justify-between hidden sm:flex">
                         <div class="px-8">
                             <div class="h-16 w-full flex items-center">
                                 <h2>Logo</h2>
@@ -39,26 +39,26 @@
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/" class="flex items-center">
+                                    <a href="/sales" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>shopping bag</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><path d="M10.5,5.5V3 c0-1.381-1.119-2.5-2.5-2.5h0C6.619,0.5,5.5,1.619,5.5,3v2.5" data-cap="butt" stroke="currentColor"></path> <polygon points="14.5,15.5 1.5,15.5 2.5,5.5 13.5,5.5 " data-cap="butt"></polygon></g></svg>
                                         <span class="text-sm ml-2">Sales</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/" class="flex items-center">
+                                    <a href="/purchases" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>cart</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><circle cx="3" cy="14" r="1.5" data-cap="butt" stroke="currentColor"></circle> <circle cx="13" cy="14" r="1.5" data-cap="butt" stroke="currentColor"></circle> <polyline points="2.5,2.5 14.5,2.5 12.5,7.5 2.5,7.5 " data-cap="butt"></polyline> <polyline id="butt_41_" points=" 0.5,0.5 2.5,2.5 2.5,7.5 0.5,10.5 15.5,10.5 " data-cap="butt"></polyline></g>
                                         </svg>
                                         <span class="text-sm ml-2">Purchases</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/" class="flex items-center">
+                                    <a href="/products" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>stack</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor"" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><polygon points="8,1.5 15.5,6 8,10.5 0.5,6 " data-cap="butt"></polygon> <polyline points="14,9.1 15.5,10 8,14.5 0.5,10 2,9.1 " data-cap="butt" stroke="currentColor""></polyline> </g></svg>
                                         <span class="text-sm ml-2">Products</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/" class="flex items-center">
+                                    <a href="/reports" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>file text</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="11.5" stroke="currentColor"></line> <line x1="4.5" y1="8.5" x2="11.5" y2="8.5" stroke="currentColor"></line> <line x1="4.5" y1="5.5" x2="6.5" y2="5.5" stroke="currentColor"></line> <polygon points="9.5,0.5 1.5,0.5 1.5,15.5 14.5,15.5 14.5,5.5 "></polygon> <polyline points="9.5,0.5 9.5,5.5 14.5,5.5 "></polyline></g></svg>
                                         <span class="text-sm ml-2">Reports</span>
                                     </a>
@@ -235,26 +235,26 @@
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/" class="flex items-center">
+                                    <a href="/sales" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>shopping bag</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><path d="M10.5,5.5V3 c0-1.381-1.119-2.5-2.5-2.5h0C6.619,0.5,5.5,1.619,5.5,3v2.5" data-cap="butt" stroke="currentColor"></path> <polygon points="14.5,15.5 1.5,15.5 2.5,5.5 13.5,5.5 " data-cap="butt"></polygon></g></svg>
                                         <span class="text-sm ml-2">Sales</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/" class="flex items-center">
+                                    <a href="/purchases" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>cart</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><circle cx="3" cy="14" r="1.5" data-cap="butt" stroke="currentColor"></circle> <circle cx="13" cy="14" r="1.5" data-cap="butt" stroke="currentColor"></circle> <polyline points="2.5,2.5 14.5,2.5 12.5,7.5 2.5,7.5 " data-cap="butt"></polyline> <polyline id="butt_41_" points=" 0.5,0.5 2.5,2.5 2.5,7.5 0.5,10.5 15.5,10.5 " data-cap="butt"></polyline></g>
                                         </svg>
                                         <span class="text-sm ml-2">Purchases</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/" class="flex items-center">
+                                    <a href="/products" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>stack</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor"" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><polygon points="8,1.5 15.5,6 8,10.5 0.5,6 " data-cap="butt"></polygon> <polyline points="14,9.1 15.5,10 8,14.5 0.5,10 2,9.1 " data-cap="butt" stroke="currentColor""></polyline> </g></svg>
                                         <span class="text-sm ml-2">Products</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/" class="flex items-center">
+                                    <a href="/reports" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>file text</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="11.5" stroke="currentColor"></line> <line x1="4.5" y1="8.5" x2="11.5" y2="8.5" stroke="currentColor"></line> <line x1="4.5" y1="5.5" x2="6.5" y2="5.5" stroke="currentColor"></line> <polygon points="9.5,0.5 1.5,0.5 1.5,15.5 14.5,15.5 14.5,5.5 "></polygon> <polyline points="9.5,0.5 9.5,5.5 14.5,5.5 "></polyline></g></svg>
                                         <span class="text-sm ml-2">Reports</span>
                                     </a>
@@ -314,38 +314,141 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- Sidebar ends -->
+                    <!-- Sidebar ends --> 
                     <!-- Remove class [ h-64 ] when adding a card block -->
-                    <div class="container mx-auto py-10 md:w-4/5 w-11/12 px-6">
+                    <div style="width:100vw" class="ml-64 pb-6 md:w-4/5 w-11/12">
+                        <header class="py-6 px-4 flex flex-row-reverse bg-white" >
+                            <div class="mx-6">
+                                Admin
+                            </div>
+                            <div class="flex">
+                                    <div>
+                                        
+
+                                        <button id="add-product-button" >
+                                            Add Product
+                                        </button>
+                                        <div
+                                            id="add-form"
+                                            class="absolute left-[40%] p-10 max-w-lg mx-auto mt-24 bg-white rounded drop-shadow-xl hidden " >
+                                            <form action="/products" method="post">
+                                                @csrf
+                                                <div class="mb-6">
+                                                    <label
+                                                        for="name"
+                                                        class="inline-block text-lg mb-2"
+                                                        >Jina la bidhaa</label
+                                                    >
+                                                    <input
+                                                        type="text"
+                                                        class="border border-gray-600 rounded p-2 w-full"
+                                                        name="name"
+                                                        placeholder="Misumari nchi 4"
+                                                        value="{{old('name')}}"
+                                                        required
+                                                    />
+                                                    @error('name')
+                                                        <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                                                    @enderror
+                                                </div>
+                                        
+                                                <div class="mb-6">
+                                                    <label
+                                                        for="category"
+                                                        class="inline-block text-lg mb-2"
+                                                        >Kundi la bidhaa</label
+                                                    >
+                                                    <input
+                                                        type="text"
+                                                        class="border border-gray-600 rounded p-2 w-full"
+                                                        name="category"
+                                                        list="categories"
+                                                        value="{{old('category')}}"
+                                                    />
+                                                    <datalist>
+                                                        <option value="misumari"> Misumari</option>
+                                                        <option value="nyundo"> Nyundo</option>
+                                                    </datalist>
+                                                    @error('name')
+                                                        <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                                                    @enderror
+                                                </div>
+                                        
+                                                <div class="mb-6">
+                                                    <label
+                                                        for="description"
+                                                        class="inline-block text-lg mb-2"
+                                                        >Maelezo ya bidhaa</label
+                                                    >
+                                                    <textarea
+                                                            class="border border-gray-600 rounded p-1 w-full"
+                                                            name="description"
+                                                            rows="3"
+                                                            placeholder="Maelezo kidogo kuhusu bidhaa"
+                                                            
+                                                        >
+                                                            {{old('description')}}
+                                                        </textarea>
+                                                    @error('name')
+                                                        <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                                                    @enderror
+                                        
+                                                    <button class="bg-gray-800 text-white rounded py-2 px-4 hover:bg-black">
+                                                        Ongeza Bidhaa
+                                                    </button>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        
+                                    </div>
+
+                            </div>
+
+                            
+                        </header>
                         <!-- Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border -->
-                        <div class="w-full h-full rounded">
+                        <div class="w-full mx-auto px-6 py-4 rounded">
                             <!-- Place your content here -->
                             {{-- VIEW OUTPUT --}}
                             @yield('content')
                         </div>
                     </div>
                 </div>
-                <script>
-                    var sideBar = document.getElementById("mobile-nav");
-                    var openSidebar = document.getElementById("openSideBar");
-                    var closeSidebar = document.getElementById("closeSideBar");
-                    sideBar.style.transform = "translateX(-260px)";
-
-                    function sidebarHandler(flag) {
-                        if (flag) {
-                            sideBar.style.transform = "translateX(0px)";
-                            openSidebar.classList.add("hidden");
-                            closeSidebar.classList.remove("hidden");
-                        } else {
-                            sideBar.style.transform = "translateX(-260px)";
-                            closeSidebar.classList.add("hidden");
-                            openSidebar.classList.remove("hidden");
-                        }
-                    }
-                </script>
+                
                 
             </dh-component>
         </div>
+
+        <script>
+            // Sidebar 
+            var sideBar = document.getElementById("mobile-nav");
+            var openSidebar = document.getElementById("openSideBar");
+            var closeSidebar = document.getElementById("closeSideBar");
+            sideBar.style.transform = "translateX(-260px)";
+
+            function sidebarHandler(flag) {
+                if (flag) {
+                    sideBar.style.transform = "translateX(0px)";
+                    openSidebar.classList.add("hidden");
+                    closeSidebar.classList.remove("hidden");
+                } else {
+                    sideBar.style.transform = "translateX(-260px)";
+                    closeSidebar.classList.add("hidden");
+                    openSidebar.classList.remove("hidden");
+                }
+            }
+
+            // Add Product Form
+            const addProductForm = document.getElementById('add-form');
+            const addProductBtn = document.getElementById('add-product-button');
+
+            addProductBtn.addEventListener('click', function(){
+                addProductForm.classList.toggle('hidden')
+            })
+
+
+        </script>
 </body>
 </html>
  
