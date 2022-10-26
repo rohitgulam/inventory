@@ -11,6 +11,7 @@
             extend: {
               colors: {
                 main: '#00253E',
+                opacity: 'rgba(0,0,0,0.3)'
               }
             }
           }
@@ -32,35 +33,35 @@
                                 <h2>Logo</h2>
                             </div>
                             <ul class="mt-12">
-                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/" class="flex items-center">
+                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
+                                    <a href="/" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>statistics</title><g stroke-width="1" stroke-linejoin="round" fill="none" stroke="currentColor" stroke-linecap="round" class="nc-icon-wrapper"><line x1="3.5" y1="12.5" x2="3.5" y2="9.5"></line><line x1="6.5" y1="5.5" x2="6.5" y2="12.5"></line><line x1="9.5" y1="12.5" x2="9.5" y2="9.5"></line><line x1="12.5" y1="5.5" x2="12.5" y2="12.5"></line><line x1="0.5" y1="14.5" x2="15.5" y2="14.5"></line><polyline points="13.5 0.5 9.5 4.5 6.5 1.5 2.5 5.5" stroke="currentColor"></polyline></g></svg>
-                                        <span class="text-sm ml-2">Dashboard</span>
+                                        <span class="text-sm ml-2">Muhtasari</span>
                                     </a>
                                 </li>
-                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/sales" class="flex items-center">
+                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
+                                    <a href="/sales" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>shopping bag</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><path d="M10.5,5.5V3 c0-1.381-1.119-2.5-2.5-2.5h0C6.619,0.5,5.5,1.619,5.5,3v2.5" data-cap="butt" stroke="currentColor"></path> <polygon points="14.5,15.5 1.5,15.5 2.5,5.5 13.5,5.5 " data-cap="butt"></polygon></g></svg>
-                                        <span class="text-sm ml-2">Sales</span>
+                                        <span class="text-sm ml-2">Mauzo</span>
                                     </a>
                                 </li>
-                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/purchases" class="flex items-center">
+                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
+                                    <a href="/purchases" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>cart</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><circle cx="3" cy="14" r="1.5" data-cap="butt" stroke="currentColor"></circle> <circle cx="13" cy="14" r="1.5" data-cap="butt" stroke="currentColor"></circle> <polyline points="2.5,2.5 14.5,2.5 12.5,7.5 2.5,7.5 " data-cap="butt"></polyline> <polyline id="butt_41_" points=" 0.5,0.5 2.5,2.5 2.5,7.5 0.5,10.5 15.5,10.5 " data-cap="butt"></polyline></g>
                                         </svg>
-                                        <span class="text-sm ml-2">Purchases</span>
+                                        <span class="text-sm ml-2">Manunuzi</span>
                                     </a>
                                 </li>
-                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/products" class="flex items-center">
+                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
+                                    <a href="/products" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>stack</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor"" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><polygon points="8,1.5 15.5,6 8,10.5 0.5,6 " data-cap="butt"></polygon> <polyline points="14,9.1 15.5,10 8,14.5 0.5,10 2,9.1 " data-cap="butt" stroke="currentColor""></polyline> </g></svg>
-                                        <span class="text-sm ml-2">Products</span>
+                                        <span class="text-sm ml-2">Bidhaa</span>
                                     </a>
                                 </li>
-                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
-                                    <a href="/reports" class="flex items-center">
+                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
+                                    <a href="/reports" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>file text</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="11.5" stroke="currentColor"></line> <line x1="4.5" y1="8.5" x2="11.5" y2="8.5" stroke="currentColor"></line> <line x1="4.5" y1="5.5" x2="6.5" y2="5.5" stroke="currentColor"></line> <polygon points="9.5,0.5 1.5,0.5 1.5,15.5 14.5,15.5 14.5,5.5 "></polygon> <polyline points="9.5,0.5 9.5,5.5 14.5,5.5 "></polyline></g></svg>
-                                        <span class="text-sm ml-2">Reports</span>
+                                        <span class="text-sm ml-2">Repoti</span>
                                     </a>
                                 </li>
                                 
@@ -160,7 +161,7 @@
                                             <rect x="4" y="14" width="6" height="6" rx="1"></rect>
                                             <rect x="14" y="14" width="6" height="6" rx="1"></rect>
                                         </svg>
-                                        <span class="text-sm ml-2">Dashboard</span>
+                                        <span class="text-sm ml-2">Muhtasari</span>
                                     </a>
                                     <div class="py-1 px-3 bg-gray-600 rounded text-gray-300 flex items-center justify-center text-xs">5</div>
                                 </li>
@@ -231,32 +232,32 @@
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
                                     <a href="/" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>statistics</title><g stroke-width="1" stroke-linejoin="round" fill="none" stroke="currentColor" stroke-linecap="round" class="nc-icon-wrapper"><line x1="3.5" y1="12.5" x2="3.5" y2="9.5"></line><line x1="6.5" y1="5.5" x2="6.5" y2="12.5"></line><line x1="9.5" y1="12.5" x2="9.5" y2="9.5"></line><line x1="12.5" y1="5.5" x2="12.5" y2="12.5"></line><line x1="0.5" y1="14.5" x2="15.5" y2="14.5"></line><polyline points="13.5 0.5 9.5 4.5 6.5 1.5 2.5 5.5" stroke="currentColor"></polyline></g></svg>
-                                        <span class="text-sm ml-2">Dashboard</span>
+                                        <span class="text-sm ml-2">Muhtasari</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
                                     <a href="/sales" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>shopping bag</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><path d="M10.5,5.5V3 c0-1.381-1.119-2.5-2.5-2.5h0C6.619,0.5,5.5,1.619,5.5,3v2.5" data-cap="butt" stroke="currentColor"></path> <polygon points="14.5,15.5 1.5,15.5 2.5,5.5 13.5,5.5 " data-cap="butt"></polygon></g></svg>
-                                        <span class="text-sm ml-2">Sales</span>
+                                        <span class="text-sm ml-2">Mauzo</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
                                     <a href="/purchases" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>cart</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><circle cx="3" cy="14" r="1.5" data-cap="butt" stroke="currentColor"></circle> <circle cx="13" cy="14" r="1.5" data-cap="butt" stroke="currentColor"></circle> <polyline points="2.5,2.5 14.5,2.5 12.5,7.5 2.5,7.5 " data-cap="butt"></polyline> <polyline id="butt_41_" points=" 0.5,0.5 2.5,2.5 2.5,7.5 0.5,10.5 15.5,10.5 " data-cap="butt"></polyline></g>
                                         </svg>
-                                        <span class="text-sm ml-2">Purchases</span>
+                                        <span class="text-sm ml-2">Manunuzi</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
                                     <a href="/products" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>stack</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor"" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><polygon points="8,1.5 15.5,6 8,10.5 0.5,6 " data-cap="butt"></polygon> <polyline points="14,9.1 15.5,10 8,14.5 0.5,10 2,9.1 " data-cap="butt" stroke="currentColor""></polyline> </g></svg>
-                                        <span class="text-sm ml-2">Products</span>
+                                        <span class="text-sm ml-2">Bidhaa</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4 py-2 px-2 hover:bg-gray-100 hover:text-gray-900">
                                     <a href="/reports" class="flex items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>file text</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="11.5" stroke="currentColor"></line> <line x1="4.5" y1="8.5" x2="11.5" y2="8.5" stroke="currentColor"></line> <line x1="4.5" y1="5.5" x2="6.5" y2="5.5" stroke="currentColor"></line> <polygon points="9.5,0.5 1.5,0.5 1.5,15.5 14.5,15.5 14.5,5.5 "></polygon> <polyline points="9.5,0.5 9.5,5.5 14.5,5.5 "></polyline></g></svg>
-                                        <span class="text-sm ml-2">Reports</span>
+                                        <span class="text-sm ml-2">Repoti</span>
                                     </a>
                                 </li>
                                 
@@ -316,91 +317,22 @@
                     </div>
                     <!-- Sidebar ends --> 
                     <!-- Remove class [ h-64 ] when adding a card block -->
-                    <div style="width:100vw" class="ml-64 pb-6 md:w-4/5 w-11/12">
-                        <header class="py-6 px-4 flex flex-row-reverse bg-white" >
-                            <div class="mx-6">
-                                Admin
+                    <div style="width:100vw;" class="ml-64 pb-6 md:w-4/5 w-11/12">
+                        <x-flash-message/>
+                        <header class="p-4 flex flex-row-reverse bg-white" >
+                            <div class="mx-6 py-2 px-4">
+                                Gulam
                             </div>
                             <div class="flex">
                                     <div>
-                                        
 
-                                        <button id="add-product-button" >
-                                            Add Product
+                                        <button id="add-product-button" 
+                                            class="text-white bg-indigo-500 rounded py-2 px-4 hover:bg-indigo-600"
+                                        >
+                                            Ongeza Bidhaa
                                         </button>
-                                        <div
-                                            id="add-form"
-                                            class="absolute left-[40%] p-10 max-w-lg mx-auto mt-24 bg-white rounded drop-shadow-xl hidden " >
-                                            <form action="/products" method="post">
-                                                @csrf
-                                                <div class="mb-6">
-                                                    <label
-                                                        for="name"
-                                                        class="inline-block text-lg mb-2"
-                                                        >Jina la bidhaa</label
-                                                    >
-                                                    <input
-                                                        type="text"
-                                                        class="border border-gray-600 rounded p-2 w-full"
-                                                        name="name"
-                                                        placeholder="Misumari nchi 4"
-                                                        value="{{old('name')}}"
-                                                        required
-                                                    />
-                                                    @error('name')
-                                                        <p class="text-red-500 text xs mt-1">{{$message}}</p>
-                                                    @enderror
-                                                </div>
-                                        
-                                                <div class="mb-6">
-                                                    <label
-                                                        for="category"
-                                                        class="inline-block text-lg mb-2"
-                                                        >Kundi la bidhaa</label
-                                                    >
-                                                    <input
-                                                        type="text"
-                                                        class="border border-gray-600 rounded p-2 w-full"
-                                                        name="category"
-                                                        list="categories"
-                                                        value="{{old('category')}}"
-                                                    />
-                                                    <datalist>
-                                                        <option value="misumari"> Misumari</option>
-                                                        <option value="nyundo"> Nyundo</option>
-                                                    </datalist>
-                                                    @error('name')
-                                                        <p class="text-red-500 text xs mt-1">{{$message}}</p>
-                                                    @enderror
-                                                </div>
-                                        
-                                                <div class="mb-6">
-                                                    <label
-                                                        for="description"
-                                                        class="inline-block text-lg mb-2"
-                                                        >Maelezo ya bidhaa</label
-                                                    >
-                                                    <textarea
-                                                            class="border border-gray-600 rounded p-1 w-full"
-                                                            name="description"
-                                                            rows="3"
-                                                            placeholder="Maelezo kidogo kuhusu bidhaa"
-                                                            
-                                                        >
-                                                            {{old('description')}}
-                                                        </textarea>
-                                                    @error('name')
-                                                        <p class="text-red-500 text xs mt-1">{{$message}}</p>
-                                                    @enderror
-                                        
-                                                    <button class="bg-gray-800 text-white rounded py-2 px-4 hover:bg-black">
-                                                        Ongeza Bidhaa
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
 
-                                        
+                                        <x-add-product-form/>                                       
                                     </div>
 
                             </div>
@@ -442,8 +374,13 @@
             // Add Product Form
             const addProductForm = document.getElementById('add-form');
             const addProductBtn = document.getElementById('add-product-button');
+            const closeProductBtn = document.getElementById('close-product-button');
 
             addProductBtn.addEventListener('click', function(){
+                addProductForm.classList.toggle('hidden')
+            })
+
+            closeProductBtn.addEventListener('click', function(){
                 addProductForm.classList.toggle('hidden')
             })
 
