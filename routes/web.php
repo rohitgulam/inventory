@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProductController;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,4 +20,11 @@ Route::get('/', function () {
 });
 
 Route::get('/products', [ProductController::class, 'index']);
+
 Route::post('/products', [ProductController::class, 'store']);
+
+Route::delete('products/{product}', [ProductController::class, 'destroy']);
+
+Route::get('products/{product}/edit', [ProductController::class, 'edit']);
+
+Route::put('products/{product}', [ProductController::class, 'update']);
