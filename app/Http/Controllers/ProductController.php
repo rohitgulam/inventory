@@ -18,12 +18,45 @@ class ProductController extends Controller
     public function store(Request $request){
         $formFields = $request->validate([
             'name' => 'required',
+            'quantity' => 'sometimes|integer',
             'description' => 'sometimes',
             'category' => 'sometimes',
         ]);
 
         Product::create($formFields);
 
-        return redirect('/')->with('message', 'Bidhaa imeongezwa');
+        return redirect()->back()->with('message', 'Bidhaa imeongezwa');
     }
+
+    // Show edit form 
+    public function edit(Product $product){
+        return view('edit-product', ['product' => $product]);
+    }
+
+    // Update form
+    public function update(Request $request, Product $product){
+
+        $formFields = $request->validate([
+            'name' => 'required',
+            'description' => 'sometimes',
+            'quantity' => 'integer|sometimes', 
+            'category' => 'sometimes',
+        ]);
+
+        $product->update($formFields);
+
+        return redirect('/products')->with('message', 'Bidhaa imebadilishwa');
+    }
+
+    // Delete product
+    public function destroy(Product $product){
+        
+        $product->delete();
+
+        return redirect('/products')->with('message', 'Bidhaa imefutwa');
+
+
+    }
+
+
 }
