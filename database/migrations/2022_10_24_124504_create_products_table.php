@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->string('category')->nullable();
             $table->integer('quantity')->default(0);
+            $table->integer('deleted')->default(0);
             $table->timestamps();
         });
     }
