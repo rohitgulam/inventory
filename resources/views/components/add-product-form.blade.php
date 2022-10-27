@@ -77,7 +77,7 @@
                 @enderror
 
                 <x-button 
-                    class="bg-indigo-500 hover:bg-indigo-600"
+                    class="bg-indigo-600 hover:bg-indigo-700"
                     name="Ongeza" 
                 />
                 
