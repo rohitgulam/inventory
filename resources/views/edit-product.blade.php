@@ -86,7 +86,7 @@
                 <p class="text-red-500 text xs mt-1">{{$message}}</p>
             @enderror
 
-            <button class="bg-indigo-500 text-white rounded py-2 px-4 hover:bg-indigo-600">
+            <button class="bg-indigo-600 text-white rounded py-2 px-4 hover:bg-indigo-700">
                 Badilisha
             </button>
         </div>
@@ -94,27 +94,3 @@
 </div>
     
 @endsection
-
-{{-- @extends('layout')
-
-@section('section')
-
-<div
-    id="edit-form"
-    class="fixed left-0 top-0 p-10 w-full h-[100vh] mx-auto bg-opacity rounded drop-shadow-2xl" >
-
-    <div
-        class="absolute left-[40%] p-10 max-w-lg mx-auto mt-24 bg-white rounded drop-shadow-2xl" 
-    >
-
-    <button id="close-edit-button" class="absolute top-2 right-2 text-red-800">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
-    </button>
-
-
-
-
-    </div>
-</div>
-
-@endsection --}}
