@@ -326,11 +326,9 @@
                             <div class="flex">
                                     <div>
 
-                                        <button id="add-product-button" 
-                                            class="text-white bg-indigo-500 rounded py-2 px-4 hover:bg-indigo-600"
-                                        >
-                                            Ongeza Bidhaa
-                                        </button>
+                                        <x-button 
+                                            class="bg-indigo-500 hover:bg-indigo-600"
+                                            name="Ongeza Bidhaa"/>
 
                                         <x-add-product-form/>                                       
                                     </div>

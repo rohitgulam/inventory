@@ -76,9 +76,11 @@
                     <p class="text-red-500 text xs mt-1">{{$message}}</p>
                 @enderror
 
-                <button class="bg-indigo-500 text-white rounded py-2 px-4 hover:bg-indigo-600">
-                    Ongeza
-                </button>
+                <x-button 
+                    class="bg-indigo-500 hover:bg-indigo-600"
+                    name="Ongeza" 
+                />
+                
             </div>
         </form>
     </div>

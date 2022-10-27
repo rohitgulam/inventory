@@ -40,16 +40,19 @@
                                 <div class="flex">
                                     <form action="/products/{{$product->id}}/edit" method="GET">
                                         @csrf
-                                        <button class="bg-blue-600 text-white rounded py-2 px-4 mx-2 hover:bg-blue-700">
-                                            Hariri
-                                        </button>
+                                        <x-button 
+                                            class="bg-blue-600 hover:bg-blue-700 mx-2"
+                                            name="Hariri"
+                                        />
                                     </form>
                                     <form action="/products/{{$product->id}}" method="post">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="bg-red-500 text-white rounded py-2 px-4 mx-2 hover:bg-red-600">
-                                            Futa
-                                        </button>
+                                        <x-button 
+                                            class="bg-red-500 hover:bg-red-600 mx-2" 
+                                            name="Futa"
+                                        />
+                                        
                                     </form>
                                 </div>
                             </td>
