@@ -4,7 +4,7 @@
 <div class="pt-12">
     <div class="w-12/12 flex flex-col items-center justify-center">
         <div class="flex justify-between w-full my-6">
-            <h2 class="text-3xl" >Orodha ya bidhaa zote</h2>
+            <h2 class="text-3xl" >Orodha ya Manunuzi Yote</h2>
             
             <x-a-button  
                 class="bg-indigo-600 hover:bg-indigo-700"
