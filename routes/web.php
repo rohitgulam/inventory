@@ -40,4 +40,4 @@ Route::post('/purchases', [PurchaseController::class, 'store']);
 
 // Search product 
 
-Route::post('/searchproduct', [PurchaseController::class, 'searchPost']);
+Route::post('/searchproduct', [PurchaseController::class, 'searchProduct']);
