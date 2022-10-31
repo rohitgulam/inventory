@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer('credit')->default(0);
             $table->string('purchase_from')->nullable();
             $table->string('purchase_by');
-            $table->foreign('product_id')->references('id')->on('products');
+            $table->foreign('id')->references('id')->on('products');
             $table->timestamp('purchase_date')->useCurrent();
             $table->timestamps();
         });
