@@ -18,9 +18,13 @@ class ProductController extends Controller
     public function store(Request $request){
         $formFields = $request->validate([
             'name' => 'required',
-            'quantity' => 'sometimes|integer',
             'description' => 'sometimes',
             'category' => 'sometimes',
+            'quality' => 'string',
+            'metric' => 'string',
+            'selling_price' => 'integer',
+            'bonus' => 'integer',
+            'quantity' => 'sometimes|integer',
         ]);
 
         Product::create($formFields);
