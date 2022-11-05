@@ -77,7 +77,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="px-8 border-t border-gray-700">
+                        {{-- <div class="px-8 border-t border-gray-700">
                             <ul class="w-full flex items-center justify-between bg-gray-800">
                                 <li class="cursor-pointer text-white pt-5 pb-3">
                                     <button aria-label="show notifications" class="focus:outline-none focus:ring-2 rounded focus:ring-gray-300">
@@ -117,7 +117,7 @@
                                     </button>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
 
                     <div class="w-64 z-40 absolute bg-gray-800 shadow md:h-full flex-col justify-between sm:hidden transition duration-150 ease-in-out" id="mobile-nav">
@@ -273,7 +273,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="px-8 border-t border-gray-700">
+                        {{-- <div class="px-8 border-t border-gray-700">
                             <ul class="w-full flex items-center justify-between bg-gray-800">
                                 <li class="cursor-pointer text-white pt-5 pb-3">
                                     <button aria-label="show notifications" class="focus:outline-none focus:ring-2 rounded focus:ring-gray-300">
@@ -313,7 +313,7 @@
                                     </button>
                                 </li>
                             </ul>
-                        </div>
+                        </div> --}}
                     </div>
                     <!-- Sidebar ends --> 
                     <!-- Remove class [ h-64 ] when adding a card block -->
@@ -350,6 +350,9 @@
             </dh-component>
         </div>
 
+        @vite('resources/js/app.js')
+
+        
         <script>
             // Sidebar 
             var sideBar = document.getElementById("mobile-nav");
@@ -382,8 +385,24 @@
                 addProductForm.classList.toggle('hidden')
             })
 
+            // Search Product 
+            const searchProductInput = document.getElementById('search-product');
 
-        </script>
+            searchProductInput.addEventListener('keyup', (e) => {
+                let searchQuery = e.target.value;
+                console.log("Coming from the search field:",  searchQuery);
+
+                axios.post('/searchproduct', {
+                    token: '{{ csrf_token() }}',
+                    searchQuery : searchQuery
+                })
+                .then( response => console.log(response) )
+                .catch( err => console.log('ERROR', err.response.data) )
+            })
+
+        </script> 
+
+        
 </body>
 </html>
  
