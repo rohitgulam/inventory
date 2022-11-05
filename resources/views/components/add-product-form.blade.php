@@ -1,9 +1,9 @@
 <div
     id="add-form"
-    class="fixed left-0 top-0 p-10 w-full h-[100vh] mx-auto bg-opacity rounded drop-shadow-2xl hidden" >
+    class="fixed left-0 top-0 p-10 w-full h-[100vh] mx-auto bg-opacity rounded drop-shadow-2xl hidden z-10" >
 
     <div
-        class="absolute left-[40%] p-10 max-w-lg mx-auto mt-24 bg-white rounded drop-shadow-2xl" 
+        class="absolute left-[40%] p-10 max-w-lg mx-auto mt-10 bg-white rounded drop-shadow-2xl" 
     >
 
     <button id="close-product-button" class="absolute top-2 right-2 text-red-800">
@@ -53,6 +53,75 @@
                     <option value="nyundo"> Nyundo</option>
                 </datalist>
                 @error('name')
+                    <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
+
+            <div class="mb-6">
+                <label
+                    for="quality"
+                    class="inline-block text-lg mb-2"
+                    >Ubora wa bidhaa</label
+                >
+                <input
+                    type="text"
+                    class="border border-gray-600 rounded p-2 w-full"
+                    name="quality"
+                    value="{{old('quality')}}"
+                />
+                @error('quality')
+                    <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
+
+            <div class="mb-6">
+                <label
+                    for="selling_price"
+                    class="inline-block text-lg mb-2"
+                    >Bei ya kuuza </label
+                >
+                <input
+                    type="text"
+                    class="border border-gray-600 rounded p-2 w-full"
+                    name="selling_price"
+                    value="{{old('selling_price')}}"
+                />
+                @error('selling_price')
+                    <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
+
+            <div class="mb-6">
+                <label
+                    for="metric"
+                    class="inline-block text-lg mb-2"
+                >
+                    Uuzaji wa bidhaa
+                </label>
+
+                <select name="metric" id="metric" class="border border-gray-600 rounded p-2 w-full">
+                    <option value="kilo">Kwa kilo</option>
+                    <option value="units">Moja moja</option>
+                </select>
+                @error('metric')
+                    <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
+
+            <div class="mb-6">
+                
+
+                
+            </div>
+
+            <div class="mb-6">
+                <label for="bonus" class="inline-flex relative items-center cursor-pointer">
+                    <input type="checkbox" value="1" id="bonus" class="sr-only peer" name="bonus">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                    <span class="ml-3 ">Bonus</span>
+                  </label>
+
+                @error('bonus')
                     <p class="text-red-500 text xs mt-1">{{$message}}</p>
                 @enderror
             </div>
