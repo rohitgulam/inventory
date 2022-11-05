@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.tailwindcss.com"></script>
+    {{-- <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
           theme: {
@@ -16,7 +16,8 @@
             }
           }
         }
-      </script>
+      </script> --}}
+      @vite('resources/css/app.css')
     <title>Inventory Management System</title>
 </head>
 <body class="bg-[#E5E5E5]" >
@@ -351,58 +352,6 @@
         </div>
 
         @vite('resources/js/app.js')
-
-        
-        <script>
-            // Sidebar 
-            var sideBar = document.getElementById("mobile-nav");
-            var openSidebar = document.getElementById("openSideBar");
-            var closeSidebar = document.getElementById("closeSideBar");
-            sideBar.style.transform = "translateX(-260px)";
-
-            function sidebarHandler(flag) {
-                if (flag) {
-                    sideBar.style.transform = "translateX(0px)";
-                    openSidebar.classList.add("hidden");
-                    closeSidebar.classList.remove("hidden");
-                } else {
-                    sideBar.style.transform = "translateX(-260px)";
-                    closeSidebar.classList.add("hidden");
-                    openSidebar.classList.remove("hidden");
-                }
-            }
-
-            // Add Product Form
-            const addProductForm = document.getElementById('add-form');
-            const addProductBtn = document.getElementById('add-product-button');
-            const closeProductBtn = document.getElementById('close-product-button');
-
-            addProductBtn.addEventListener('click', function(){
-                addProductForm.classList.toggle('hidden')
-            })
-
-            closeProductBtn.addEventListener('click', function(){
-                addProductForm.classList.toggle('hidden')
-            })
-
-            // Search Product 
-            const searchProductInput = document.getElementById('search-product');
-
-            searchProductInput.addEventListener('keyup', (e) => {
-                let searchQuery = e.target.value;
-                console.log("Coming from the search field:",  searchQuery);
-
-                axios.post('/searchproduct', {
-                    token: '{{ csrf_token() }}',
-                    searchQuery : searchQuery
-                })
-                .then( response => console.log(response) )
-                .catch( err => console.log('ERROR', err.response.data) )
-            })
-
-        </script> 
-
-        
 </body>
 </html>
  
