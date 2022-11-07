@@ -10,6 +10,7 @@
                     <tr>
                         <th class="pr-12 pl-4 border border-gray-400 py-2 text-center" >#</th>
                         <th class="pr-12 pl-4 border border-gray-400 py-2" >Jina la bidhaa</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2">Ubora</th>
                         <th class="pr-12 pl-4 border border-gray-400 py-2">Kategoria</th>
                         <th class="pr-12 pl-4 border border-gray-400 py-2">Idadi iliyopo store</th>
                         <th class="pr-12 pl-4 border border-gray-400 py-2" >Maelezo</th>
@@ -21,6 +22,7 @@
                         <tr>
                             <td class="pr-12 pl-4 border border-gray-400 py-2 text-center" > {{$loop->iteration}}</td>
                             <td class="pr-12 pl-4 border border-gray-400 py-2" > {{$product->name}}</td>
+                            <td class="pr-12 pl-4 border border-gray-400 py-2" > {{$product->quality}}</td>
                             <td class="pr-12 pl-4 border border-gray-400 py-2"> 
                                 @if ($product->category == null)
                                     Haina Kategoria
@@ -54,6 +56,19 @@
                                         />
                                         
                                     </form>
+
+                                    @unless ($product->bonus !== 1)
+                                    <form action="/products/bonus/{{$product->id}}/edit" method="post">
+                                        @csrf
+                                        @method('PUT')
+                                        <x-button 
+                                            class="bg-slate-500 hover:bg-slate-600 mx-2" 
+                                            name="Weka Bonus"
+                                        />
+                                        
+                                    </form>
+                                    @endunless
+
                                 </div>
                             </td>
                         </tr>
