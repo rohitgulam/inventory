@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('purchase_from')->nullable();
             // $table->foreign('purchase_by')->references('id')->on('users');
             $table->string('purchase_by');
-            $table->string('description');
+            $table->string('description')->nullables;
             $table->timestamps();
         });
     }
