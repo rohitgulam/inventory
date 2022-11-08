@@ -108,21 +108,67 @@
                 <span class="text-2xl font-bold" id="orderSum">0</span>
             </div>
         </div>
-    
+        
+        <div class="">
+            <form action="/purchase/order/create" method="post">
+                @csrf
+                @method('POST')
+                <input class="hidden" type="text" id="productsDB" name="products" >
+                <input class="hidden" type="text" id="priceDB" name="price" hidden>
+                <input class="hidden" type="text" id="quantityDB" name="quantity" hidden>
+                <input class="hidden" type="text" id="unit_sumDB" name="unit_sum" hidden>
+                <input class="hidden" type="integer" id="order_sumDB" name="order_sum" hidden> 
+                <input class="hidden" value="res" name="description" hidden> 
 
-    
+                <div class="flex justify-between">
+                    <div class="mb-6 mx-2 w-3/6">
+                        <label
+                            for="purchase_by"
+                            class="inline-block text-lg mb-2"
+                            >Anaefanya Manunuzi</label
+                        >
+                        <input
+                            type="text"
+                            class="border border-gray-600 rounded p-2 w-full"
+                            name="purchase_by"
+                            placeholder="Misumari nchi 4"
+                            value="Admin"
+                            required
+                            oninvalid="this.setCustomValidity('Lazima ujaze jina la bidhaa')"
+                        />
+                        @error('purchase_by')
+                            <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                        @enderror
+                    </div>
+                    <div class="mb-6 w-3/6">
+                        <label
+                            for="purchase_from"
+                            class="inline-block text-lg mb-2"
+                            >Tumenunua kutoka kwa</label
+                        >
+                        <input
+                            type="text"
+                            class="border border-gray-600 rounded p-2 w-full"
+                            name="purchase_from"
+                            placeholder="Misumari nchi 4"
+                            value="Masengo Traders"
+                            required
+                            oninvalid="this.setCustomValidity('Lazima ujaze jina la bidhaa')"
+                        />
+                        @error('purchase_from')
+                            <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                        @enderror
+                    </div>
+                </div>
 
-
-
-
-
-         
-        <button class="my-2 text-white rounded py-2 px-4 bg-indigo-600 hover:bg-indigo-700">
-            Fanya Manunuzi
-        </button>
-        <button id="clearAllOrders" class="my-2 text-white rounded py-2 px-4 bg-red-600 hover:bg-red-700">
-            Futa oda yote
-        </button>
+                <button type="submit" class="my-2 text-white rounded py-2 px-4 bg-indigo-600 hover:bg-indigo-700">
+                    Fanya Manunuzi
+                </button>
+                <button id="clearAllOrders" type="reset" class="my-2 mx-4 text-white rounded py-2 px-4 bg-red-600 hover:bg-red-700">
+                    Futa oda yote
+                </button>
+            </form>
+        </div>
     
         <script>
             const editTable = document.getElementById('edit_table');
@@ -138,6 +184,12 @@
             const orderSum = document.getElementById('orderSum');
             let orders;
 
+            // Vars to send to BackEnd
+            let productsDB = document.getElementById('productsDB');
+            let priceDB = document.getElementById('priceDB');
+            let quantityDB = document.getElementById('quantityDB');
+            let unit_sumDB = document.getElementById('unit_sumDB');
+            let order_sumDB = document.getElementById('order_sumDB');
 
 
             // Declaring varibles so they can be use outside function (chooseToEdit)
@@ -262,6 +314,12 @@
                 orderedItems.innerHTML = ''
                 orderSum.innerText = ''
 
+                productsDB.value = ''
+                priceDB.value = ''
+                quantityDB.value = ''
+                unit_sumDB.value = ''
+                order_sumDB.value = ''
+
                 for (let index = 0; index < orders.products.length; index++) {
                     let results = document.createElement('tr')
 
@@ -287,6 +345,12 @@
                     orderSum.innerText = orders.order_sum
 
                     orderedItems.appendChild(results)
+
+                    productsDB.value = orders.products
+                    priceDB.value = orders.price
+                    quantityDB.value = orders.quantity
+                    unit_sumDB.value = orders.unit_sum
+                    order_sumDB.value = orders.order_sum
                     
                 }
             }
