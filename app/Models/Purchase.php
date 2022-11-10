@@ -13,10 +13,12 @@ class Purchase extends Model
         'product',
         'quantity',
         'price',
+        'unit_sum',
         'credit',
         'creditor',
         'purchase_by',
         'purchase_from',
-        'product_id'
+        'product_id',
+        'description'
     ];
 }
