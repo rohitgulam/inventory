@@ -95,12 +95,11 @@
                 @csrf
                 @method('POST')
                 <input class="hidden" type="text" id="ordersDB" name="orders" hidden>
+                <input class="hidden" type="text" id="order_sumDB" name="order_sum" hidden>
                 {{-- <input class="hidden" type="text" id="priceDB" name="price" hidden>
                 <input class="hidden" type="text" id="quantityDB" name="quantity" hidden>
                 <input class="hidden" type="text" id="unit_sumDB" name="unit_sum" hidden>
                 <input class="hidden" type="integer" id="order_sumDB" name="order_sum" hidden>  --}}
-                <input class="hidden" value="res" name="description" hidden> 
-
                 <div class="flex justify-between">
                     <div class="mb-6 w-3/6 mx-2">
                         <label
@@ -194,12 +193,9 @@
 
             // Vars to send to BackEnd
             let ordersDB = document.getElementById('ordersDB');
-            let priceDB = document.getElementById('priceDB');
-            let quantityDB = document.getElementById('quantityDB');
-            let unit_sumDB = document.getElementById('unit_sumDB');
-            let order_sumDB = document.getElementById('order_sumDB');
-
-
+            var order_sumDB = document.getElementById('order_sumDB');
+            
+            
             // Declaring varibles so they can be use outside function (chooseToEdit)
 
             // FROM DB
@@ -320,17 +316,15 @@
                 orderSum.innerText = ''
 
                 ordersDB.value = ''
+                order_sumDB.value = ''
 
                 var formatedOrderSum = (order_sum).toLocaleString(
                     'en-US',
                     { minimumFractionDigits: 0 }
                     );
 
-                    formatedOrderSum
-                    
-
-
-                    orderSum.innerText = formatedOrderSum
+                orderSum.innerText = formatedOrderSum
+                order_sumDB.value = order_sum
 
 
                 ordersContainer.forEach(function callback (order, index) {
