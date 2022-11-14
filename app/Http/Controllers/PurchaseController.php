@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Account;
 use App\Models\Product;
 use App\Models\Purchase;
 use Illuminate\Http\Request;
@@ -37,8 +38,6 @@ class PurchaseController extends Controller
 
         $ordersArray = json_decode($order);
 
-        // dd($orderArray[0]->name);
-
         foreach ($ordersArray as $order) {
             $order->description = $request->description;
             $order->credit = $request->credit;
@@ -46,7 +45,6 @@ class PurchaseController extends Controller
             $order->purchase_by = $request->purchase_by;
             $orderArr = json_decode(json_encode($order), true);
 
-            // dd($orderArr);
             Purchase::create($orderArr);
 
             $product = Product::find($order->product_id);
@@ -56,9 +54,19 @@ class PurchaseController extends Controller
             $product->save();
         }
 
+        $currentDate = date('Y-m-d');
 
+        $todaysAccount = Account::where('created_at', '=', $currentDate)->get();
 
-        // Purchase::create($formFields);
+        if ($todaysAccount->isEmpty()) {
+            Account::create([
+                'revenue' => $request->order_sum
+            ]);
+        } else {
+            $todaysAccount[0]->expenses = $todaysAccount[0]->expenses + $request->order_sum;
+
+            $todaysAccount[0]->save();
+        }
 
         return redirect('/purchases')->with('message', 'Manunuzi yamefanyika kikamilifu');
     }
