@@ -20,7 +20,7 @@ return new class extends Migration
                 $table->integer('quantity');
                 $table->integer('price');
                 $table->integer('unit_sum');
-                $table->integer('description');
+                $table->string('description')->nullable();
                 $table->unsignedBigInteger('product_id');
                 $table->foreign('product_id')->references('id')->on('products');
                 $table->integer('credit')->default(0);
