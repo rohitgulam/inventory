@@ -16,7 +16,7 @@
                 <tr>
                     <th class="px-6 border border-gray-400 py-2 text-center" >#</th>
                     <th class="px-6 border border-gray-400 py-2" >Jina la bidhaa</th>
-                    <th class="px-6 border border-gray-400 py-2">Kategoria</th>
+                    {{-- <th class="px-6 border border-gray-400 py-2">Kategoria</th> --}}
                     <th class="px-6 border border-gray-400 py-2">Idadi iliyonunuliwa</th>
                     <th class="px-6 border border-gray-400 py-2" >Bei ya moja</th>
                     <th class="px-6 border border-gray-400 py-2 text-center" >Bei ya jumla</th>
@@ -27,47 +27,32 @@
                 </tr>
             </thead>
             <tbody class="text-gray-500">
-                {{-- @foreach ($products as $product)
+                @foreach ($purchases as $purchase)
                     <tr>
                         <td class="pr-12 pl-4 border border-gray-400 py-2 text-center" > {{$loop->iteration}}</td>
-                        <td class="pr-12 pl-4 border border-gray-400 py-2" > {{$product->name}}</td>
-                        <td class="pr-12 pl-4 border border-gray-400 py-2"> 
-                            @if ($product->category == null)
-                                Haina Kategoria
-                            @else
-                            {{$product->category}}
+                        <td class="pr-12 pl-4 border border-gray-400 py-2" > {{$purchase->product}}</td>
+                        <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$purchase->quantity}} </td>
+                        <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$purchase->price}} </td>
+                        <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$purchase->unit_sum}} </td>
+                        <td class="pr-12 pl-4 border border-gray-400 py-2 text-center">
+                            @if ($purchase->credit == 1)
+                            Mkopo
+                            @else 
+                            Sio Mkopo
                             @endif 
                         </td>
-                        <td class="pr-12 pl-4 border border-gray-400 py-2 text-center"> {{$product->quantity}} </td>
-                        <td class="pr-12 pl-4 border border-gray-400 py-2" > 
-                            @if ($product->description == null)
+                        <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$purchase->purchase_from}} </td>
+                        <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$purchase->purchase_by}} </td>
+                        <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$purchase->created_at}} </td>
+                        {{-- <td class="pr-12 pl-4 border border-gray-400 py-2" > 
+                            @if ($purchase->description == null)
                                 Hamna maelezo
                             @else 
-                            {{$product->description}}
+                            {{$purchase->description}}
                             @endif 
-                        </td>
-                        <td class="px-6 border border-gray-400 py-1">  
-                            <div class="flex">
-                                <form action="/products/{{$product->id}}/edit" method="GET">
-                                    @csrf
-                                    <x-button 
-                                        class="bg-blue-600 hover:bg-blue-700 mx-2"
-                                        name="Hariri"
-                                    />
-                                </form>
-                                <form action="/products/{{$product->id}}" method="post">
-                                    @csrf
-                                    @method('DELETE')
-                                    <x-button 
-                                        class="bg-red-500 hover:bg-red-600 mx-2" 
-                                        name="Futa"
-                                    />
-                                    
-                                </form>
-                            </div>
-                        </td>
+                        </td> --}}
                     </tr>
-                @endforeach --}}
+                @endforeach
             </tbody>
         </table>
     </div>
