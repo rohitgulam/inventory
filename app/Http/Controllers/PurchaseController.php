@@ -60,7 +60,7 @@ class PurchaseController extends Controller
 
         if ($todaysAccount->isEmpty()) {
             Account::create([
-                'revenue' => $request->order_sum
+                'expenses' => $request->order_sum
             ]);
         } else {
             $todaysAccount[0]->expenses = $todaysAccount[0]->expenses + $request->order_sum;
