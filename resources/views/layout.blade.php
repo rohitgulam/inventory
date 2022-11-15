@@ -41,7 +41,7 @@
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
-                                    <a href="/sales" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
+                                    <a href="/sells" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>shopping bag</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><path d="M10.5,5.5V3 c0-1.381-1.119-2.5-2.5-2.5h0C6.619,0.5,5.5,1.619,5.5,3v2.5" data-cap="butt" stroke="currentColor"></path> <polygon points="14.5,15.5 1.5,15.5 2.5,5.5 13.5,5.5 " data-cap="butt"></polygon></g></svg>
                                         <span class="text-sm ml-2">Mauzo</span>
                                     </a>
