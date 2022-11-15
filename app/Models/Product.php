@@ -15,6 +15,7 @@ class Product extends Model
         'quality',
         'metric',
         'selling_price',
+        'buying_price',
         'bonus',
         'quantity',
         'deleted',
