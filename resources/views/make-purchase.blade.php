@@ -330,7 +330,7 @@
                 ordersContainer.forEach(function callback (order, index) {
                     results = document.createElement('tr');
 
-                    results.innerHTML = "<td class='pr-12 pl-4 py-2 text-center' >" + order.name + " - " + order.quality + "</td><td class='pr-12 pl-4 py-2 text-center' >" + order.quantity + "</td><td class='pr-12 pl-4 py-2 text-center' >" + order.price + "</td><td class='pr-12 pl-4 py-2 text-center' >" + order.unit_sum + "</td><td class='pr-12 pl-4 py-2 text-center' ><button onClick='deletOrderItem("+index+")' class='text-white rounded py-2 px-4 bg-red-500 hover:bg-red-600 ' >Delete</button></td>"
+                    results.innerHTML = "<td class='pr-12 pl-4 py-2 text-center' >" + order.product + " - " + order.quality + "</td><td class='pr-12 pl-4 py-2 text-center' >" + order.quantity + "</td><td class='pr-12 pl-4 py-2 text-center' >" + order.price + "</td><td class='pr-12 pl-4 py-2 text-center' >" + order.unit_sum + "</td><td class='pr-12 pl-4 py-2 text-center' ><button onClick='deletOrderItem("+index+")' class='text-white rounded py-2 px-4 bg-red-500 hover:bg-red-600 ' >Delete</button></td>"
                     
                     orderedItems.appendChild(results)
 
