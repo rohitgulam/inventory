@@ -291,8 +291,22 @@
                 // alternative way
 
                 // Save data in an Orders Container
-                ordersContainer.push({
-                    product: nameInput.value,
+
+                // Check first if the currently inputed data is already in orders container
+
+
+                // check variable 
+                let unique = true
+
+                for (let index = 0; index < ordersContainer.length; index++) {
+                    if (ordersContainer[index].product_id == id_JS) {
+                        unique = false
+                    }
+                }
+
+                if (unique) {
+                    ordersContainer.push({
+                    product: name,
                     quality: quality,
                     quantity: quantity_inputJS,
                     price: price_inputJS,
@@ -301,6 +315,9 @@
                 })
 
                 order_sum = order_sum + unit_sumJS;
+                }else{
+                    alert('Hii bidhaa ushaiweka kwenye oda tayari. Kama unataka kuongeza idadi, futa kwanza iliyopo')
+                }
 
 
                 // Displaying items to DOM from LS
