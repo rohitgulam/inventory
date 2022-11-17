@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\PurchaseOrderController;
+use App\Http\Controllers\SellController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,3 +55,15 @@ Route::post('/searchproduct', [PurchaseController::class, 'searchProduct']);
 
 // Create purchase order
 Route::post('purchase/order/create', [PurchaseController::class, 'store']);
+
+// Sales Routes
+
+// Index 
+Route::get('sells', [SellController::class, 'index']);
+
+//Show create sell
+Route::get('/sell/create', [SellController::class, 'create']);
+
+// sell order
+Route::post('sell/order/create', [SellController::class, 'store']);
+
