@@ -32,8 +32,8 @@
                         <td class="pr-12 pl-4 border border-gray-400 py-2 text-center" > {{$loop->iteration}}</td>
                         <td class="pr-12 pl-4 border border-gray-400 py-2" > {{$purchase->product}}</td>
                         <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$purchase->quantity}} </td>
-                        <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$purchase->price}} </td>
-                        <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$purchase->unit_sum}} </td>
+                        <td class="pr-12 pl-4 border border-gray-400 py-2"> @money($purchase->price) </td>
+                        <td class="pr-12 pl-4 border border-gray-400 py-2"> @money($purchase->unit_sum) </td>
                         <td class="pr-12 pl-4 border border-gray-400 py-2" > 
                             @if ($purchase->description == null)
                                 Hamna maelezo
