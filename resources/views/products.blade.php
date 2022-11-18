@@ -12,6 +12,7 @@
                         <th class="pr-12 pl-4 border border-gray-400 py-2" >Jina la bidhaa</th>
                         <th class="pr-12 pl-4 border border-gray-400 py-2">Ubora</th>
                         <th class="pr-12 pl-4 border border-gray-400 py-2">Kategoria</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2">Bei ya kuuza</th>
                         <th class="pr-12 pl-4 border border-gray-400 py-2">Idadi iliyopo store</th>
                         <th class="pr-12 pl-4 border border-gray-400 py-2" >Maelezo</th>
                         <th class="pr-12 pl-4 border border-gray-400 py-2 text-center" >Vitendo</th>
@@ -30,6 +31,7 @@
                                 {{$product->category}}
                                 @endif 
                             </td>
+                            <td class="pr-12 pl-4 border border-gray-400 py-2 text-center"> {{$product->selling_price}} </td>
                             <td class="pr-12 pl-4 border border-gray-400 py-2 text-center"> {{$product->quantity}} </td>
                             <td class="pr-12 pl-4 border border-gray-400 py-2" > 
                                 @if ($product->description == null)
