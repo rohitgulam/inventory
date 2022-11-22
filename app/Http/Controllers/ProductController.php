@@ -20,6 +20,7 @@ class ProductController extends Controller
             'name' => 'required',
             'description' => 'sometimes',
             'category' => 'sometimes',
+            'branch' => 'string|required',
             'quality' => 'string',
             'metric' => 'string',
             'selling_price' => 'integer',
@@ -61,6 +62,26 @@ class ProductController extends Controller
 
 
     }
+
+    // Dealing with bonus
+
+    // // Show add bonus form
+    // public function editBonus(Product $product  ){
+    //     return view('add-bonus', ['product' => $product]);
+    // }
+
+    // // Add Bonus
+    // public function addBonus(Request $request, Product $product){
+    //     $formFields = $request->validate([
+    //         'quantity' => 'required|integer'
+    //     ]);
+
+    //     $formFields['quantity'] = $formFields['quantity'] + $product->quantity;
+
+    //     $product->update($formFields);
+
+    //     return redirect('/products')->with('message', 'Bonus imeongezwa');
+    // }
 
 
 }
