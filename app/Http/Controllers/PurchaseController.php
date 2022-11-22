@@ -50,6 +50,7 @@ class PurchaseController extends Controller
             $product = Product::find($order->product_id);
 
             $product->quantity = $product->quantity + $order->quantity;
+            $product->buying_price = $order->price;
 
             $product->save();
         }
