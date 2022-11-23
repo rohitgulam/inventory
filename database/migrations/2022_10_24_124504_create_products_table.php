@@ -18,10 +18,11 @@ return new class extends Migration
             $table->string('name');
             $table->string('description')->nullable();
             $table->string('category')->nullable();
+            $table->string('branch');
             $table->string('quality');
             $table->string('metric');
             $table->string('selling_price');
-            $table->string('buying_price');
+            $table->string('buying_price')->default(0);
             $table->integer('bonus')->default(0);
             $table->integer('quantity')->default(0);
             $table->integer('deleted')->default(0);

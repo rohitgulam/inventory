@@ -12,6 +12,7 @@ class Product extends Model
         'name',
         'description',
         'category',
+        'branch',
         'quality',
         'metric',
         'selling_price',
