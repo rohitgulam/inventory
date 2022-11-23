@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\ExpenditureController;
+use App\Http\Controllers\ExpenseController;
 use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
@@ -66,4 +68,17 @@ Route::get('/sell/create', [SellController::class, 'create']);
 
 // sell order
 Route::post('sell/order/create', [SellController::class, 'store']);
+
+// Expenses Routes
+// Index
+Route::get('expenses', [ExpenditureController::class, 'index']);
+
+// Create expense
+Route::post('expenses', [ExpenseController::class, 'store']);
+
+// Create expense
+Route::post('expenses', [ExpenseController::class, 'store']);
+
+// Show make expenses(expenditure) form 
+Route::get('expense/create', [ExpenditureController::class, 'create']);
 
