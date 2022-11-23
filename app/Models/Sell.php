@@ -15,6 +15,7 @@ class Sell extends Model
         'price',
         'unit_sum',
         'credit',
+        'profit',
         'creditor',
         'sell_by',
         'sell_to',

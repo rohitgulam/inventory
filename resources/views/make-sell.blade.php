@@ -35,7 +35,7 @@
                     
                     <th class="pr-12 pl-4 py-2" >Jina la bidhaa</th>
                     <th class="pr-12 pl-4 py-2">Idadi</th>
-                    <th class="pr-12 pl-4 py-2">Bei ya kununua</th>
+                    <th class="pr-12 pl-4 py-2">Bei ya kuuza</th>
                     <th class="pr-12 pl-4 py-2"></th>
                 </tr>
                     
@@ -76,7 +76,7 @@
                         
                         <th class="pr-12 pl-4 py-2" >Jina la bidhaa</th>
                         <th class="pr-12 pl-4 py-2">Idadi</th>
-                        <th class="pr-12 pl-4 py-2">Bei ya kununua</th>
+                        <th class="pr-12 pl-4 py-2">Bei ya kuuza</th>
                         <th class="pr-12 pl-4 py-2">Jumla</th>
                     </tr>
                 </thead>
@@ -105,7 +105,7 @@
                         <label
                             for="sell_by"
                             class="inline-block text-lg mb-2"
-                            >Anaefanya Manunuzi</label
+                            >Anaefanya Mauzo</label
                         >
                         <input
                             type="text"
@@ -124,7 +124,7 @@
                         <label
                             for="sell_to"
                             class="inline-block text-lg mb-2"
-                            >Tumenunua kutoka kwa</label
+                            >Tunauza kwa</label
                         >
                         <input
                             type="text"
@@ -170,7 +170,7 @@
                 </div>
 
                 <button type="submit" class="my-2 text-white rounded py-2 px-4 bg-indigo-600 hover:bg-indigo-700">
-                    Fanya Manunuzi
+                    Fanya Mauzo
                 </button>
                 <button id="clearAllOrders" type="reset" class="my-2 mx-4 text-white rounded py-2 px-4 bg-red-600 hover:bg-red-700">
                     Futa oda yote
