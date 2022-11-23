@@ -31,7 +31,7 @@
                     <div style="min-height: 100vh; position: fixed;" class="w-64 absolute sm:relative bg-gray-800 shadow md:h-full flex-col justify-between hidden sm:flex">
                         <div class="px-8">
                             <div class="h-16 w-full flex items-center">
-                                <h2>Logo</h2>
+                                <h2 class="text-white text-2xl text center">KG Traders</h2>
                             </div>
                             <ul class="mt-12">
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
@@ -57,6 +57,18 @@
                                     <a href="/products" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>stack</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor"" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><polygon points="8,1.5 15.5,6 8,10.5 0.5,6 " data-cap="butt"></polygon> <polyline points="14,9.1 15.5,10 8,14.5 0.5,10 2,9.1 " data-cap="butt" stroke="currentColor""></polyline> </g></svg>
                                         <span class="text-sm ml-2">Bidhaa</span>
+                                    </a>
+                                </li>
+                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
+                                    <a href="/expenses" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                        <span class="text-sm ml-2">Matumizi</span>
+                                    </a>
+                                </li>
+                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
+                                    <a href="/transport" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                                        <span class="text-sm ml-2">Transport</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
@@ -325,15 +337,28 @@
                                 Gulam
                             </div>
                             <div class="flex">
-                                    <div>
+                                <div class="mx-2">
+                                    <button
+                                        class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-2 px-4"
+                                        id="add-expense-button"
+                                    >
+                                        Ongeza Matumizi
+                                    </button>
+                                        
+                                    <x-add-expense-form/>                                      
+                                </div>
 
-                                        <x-button 
-                                            class="bg-indigo-600 hover:bg-indigo-700"
-                                            name="Ongeza Bidhaa"/>
+                                <div class="mx-2">
+                                    <button
+                                        class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-2 px-4"
+                                        id="nav-add-product-button"
+                                    >
+                                        Ongeza Bidhaa
+                                    </button>
 
-                                        <x-add-product-form/>                                       
-                                    </div>
-
+                                    <x-add-product-form/>                                       
+                                </div>
+        
                             </div>
 
                             
