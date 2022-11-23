@@ -18,8 +18,8 @@ import './bootstrap';
  }
 
  // Add Product Form
- const addProductForm = document.getElementById('add-form');
- const addProductBtn = document.getElementById('add-product-button');
+ const addProductForm = document.getElementById('add-product-form');
+ const addProductBtn = document.getElementById('nav-add-product-button');
  const closeProductBtn = document.getElementById('close-product-button');
 
  addProductBtn.addEventListener('click', function(){
@@ -29,6 +29,19 @@ import './bootstrap';
  closeProductBtn.addEventListener('click', function(){
      addProductForm.classList.toggle('hidden')
  })
+
+//  Add Expense Form
+const addExpenseForm = document.getElementById('add-expense-form');
+const addExpenseBtn = document.getElementById('add-expense-button');
+const closeExpenseBtn = document.getElementById('close-expense-button');
+
+addExpenseBtn.addEventListener('click', function(){
+    addExpenseForm.classList.toggle('hidden')
+})
+
+closeExpenseBtn.addEventListener('click', function(){
+    addExpenseForm.classList.toggle('hidden')
+})
 
  // Search Product 
  const searchProductInput = document.getElementById('search-product');
