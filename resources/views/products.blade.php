@@ -31,7 +31,7 @@
                                 {{$product->category}}
                                 @endif 
                             </td>
-                            <td class="pr-12 pl-4 border border-gray-400 py-2 text-center"> {{$product->selling_price}} </td>
+                            <td class="pr-12 pl-4 border border-gray-400 py-2 text-center"> @money($product->selling_price) </td>
                             <td class="pr-12 pl-4 border border-gray-400 py-2 text-center"> {{$product->quantity}} </td>
                             <td class="pr-12 pl-4 border border-gray-400 py-2" > 
                                 @if ($product->description == null)
