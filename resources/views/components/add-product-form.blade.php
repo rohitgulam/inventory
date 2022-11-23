@@ -1,5 +1,5 @@
 <div
-    id="add-form"
+    id="add-product-form"
     class="fixed left-0 top-0 p-10 w-full h-[100vh] mx-auto bg-opacity rounded drop-shadow-2xl hidden z-10" >
 
     <div
@@ -15,25 +15,44 @@
 <h2 class="text-xl pb-2 font-bold" >Ongeza bidhaa</h2>
     <form action="/products" method="post">
         @csrf
-        <div class="mb-6">
-            <label
-                for="name"
-                class="inline-block text-lg mb-2"
-                >Jina la bidhaa</label
-            >
-            <input
-                type="text"
-                class="border border-gray-600 rounded p-2 w-full"
-                name="name"
-                placeholder="Misumari nchi 4"
-                value="{{old('name')}}"
-                required
-                oninvalid="this.setCustomValidity('Lazima ujaze jina la bidhaa')"
-            />
-            @error('name')
-                <p class="text-red-500 text xs mt-1">{{$message}}</p>
-            @enderror
-        </div>
+            <div class="flex">
+                <div class="mb-6 mr-1">
+                    <label
+                        for="name"
+                        class="inline-block text-lg mb-2"
+                        >Jina la bidhaa</label
+                    >
+                    <input
+                        type="text"
+                        class="border border-gray-600 rounded p-2 w-full"
+                        name="name"
+                        placeholder="Misumari nchi 4"
+                        value="{{old('name')}}"
+                        required
+                        oninvalid="this.setCustomValidity('Lazima ujaze jina la bidhaa')"
+                    />
+                    @error('name')
+                        <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-6 ml-1">
+                    <label
+                        for="quality"
+                        class="inline-block text-lg mb-2"
+                        >Ubora wa bidhaa</label
+                    >
+                    <input
+                        type="text"
+                        class="border border-gray-600 rounded p-2 w-full"
+                        name="quality"
+                        value="{{old('quality')}}"
+                    />
+                    @error('quality')
+                        <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                    @enderror
+                </div>
+            </div>
+
 
             <div class="mb-6">
                 <label
@@ -57,22 +76,7 @@
                 @enderror
             </div>
 
-            <div class="mb-6">
-                <label
-                    for="quality"
-                    class="inline-block text-lg mb-2"
-                    >Ubora wa bidhaa</label
-                >
-                <input
-                    type="text"
-                    class="border border-gray-600 rounded p-2 w-full"
-                    name="quality"
-                    value="{{old('quality')}}"
-                />
-                @error('quality')
-                    <p class="text-red-500 text xs mt-1">{{$message}}</p>
-                @enderror
-            </div>
+           
 
             <div class="mb-6">
                 <label
@@ -87,6 +91,24 @@
                     value="{{old('selling_price')}}"
                 />
                 @error('selling_price')
+                    <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                @enderror
+            </div>
+
+            <div class="mb-6">
+                <label
+                    for="branch"
+                    class="inline-block text-lg mb-2"
+                >
+                    Branch
+                </label>
+
+                <select name="branch" id="branch" class="border border-gray-600 rounded p-2 w-full">
+                    <option value="hardware">Hardware</option>
+                    <option value="tofali">Tofali</option>
+                    <option value="cement">Cement</option>
+                </select>
+                @error('branch')
                     <p class="text-red-500 text xs mt-1">{{$message}}</p>
                 @enderror
             </div>
