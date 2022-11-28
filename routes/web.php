@@ -73,6 +73,9 @@ Route::post('sell/order/create', [SellController::class, 'store']);
 // Index
 Route::get('expenses', [ExpenditureController::class, 'index']);
 
+// Search expens
+Route::post('searchexpense', [ExpenseController::class, 'searchExpense']);
+
 // Create expense
 Route::post('expenses', [ExpenseController::class, 'store']);
 
@@ -82,3 +85,5 @@ Route::post('expenses', [ExpenseController::class, 'store']);
 // Show make expenses(expenditure) form 
 Route::get('expense/create', [ExpenditureController::class, 'create']);
 
+// Store
+Route::post('/expenditure', [ExpenditureController::class, 'store']);
