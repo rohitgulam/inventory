@@ -24,5 +24,13 @@ class ExpenseController extends Controller
 
         return redirect()->back()->with('message', 'Matumizi yameongezwa');
     }
+
+    public function searchExpense(Request $request){
+        $query = $request->get('searchQuery');
+        
+        $expenses = Expense::where('name', 'like', '%' . $query . '%')->get();
+
+        return json_encode( $expenses );
+    }
     
 }
