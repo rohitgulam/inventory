@@ -59,14 +59,16 @@ class PurchaseController extends Controller
 
         $todaysAccount = Account::where('created_at', '=', $currentDate)->get();
 
-        if ($todaysAccount->isEmpty()) {
-            Account::create([
-                'expenses' => $request->order_sum
-            ]);
-        } else {
-            $todaysAccount[0]->expenses = $todaysAccount[0]->expenses + $request->order_sum;
-
-            $todaysAccount[0]->save();
+        if($order->credit == 0){
+            if ($todaysAccount->isEmpty()) {
+                Account::create([
+                    'expenses' => $request->order_sum
+                ]);
+            } else {
+                $todaysAccount[0]->expenses = $todaysAccount[0]->expenses + $request->order_sum;
+    
+                $todaysAccount[0]->save();
+            } 
         }
 
         return redirect('/purchases')->with('message', 'Manunuzi yamefanyika kikamilifu');
