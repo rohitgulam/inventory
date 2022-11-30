@@ -5,7 +5,7 @@
     <div class="pt-24">
         <div class="w-11/12 flex flex-col items-center justify-center">
             <h2 class="text-3xl py-6" >Orodha ya bidhaa zote</h2>
-            <table class="table-auto text-left border border-collapse border-gray-400">
+            <table id="datatable" class="table-auto text-left border border-collapse border-gray-400">
                 <thead>
                     <tr>
                         <th class="pr-12 pl-4 border border-gray-400 py-2 text-center" >#</th>
@@ -79,5 +79,6 @@
             </table>
         </div>
     </div>
+    @vite('resources/js/table.js')
 
 @endsection
