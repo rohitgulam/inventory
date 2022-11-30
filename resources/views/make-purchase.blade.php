@@ -177,6 +177,8 @@
                 </button>
             </form>
         </div>
+        @vite('resources/js/product.js')
+
     
         <script>
             const editTable = document.getElementById('edit_table');
