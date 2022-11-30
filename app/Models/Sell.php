@@ -17,6 +17,7 @@ class Sell extends Model
         'credit',
         'profit',
         'creditor',
+        'paid_amount',
         'sell_by',
         'sell_to',
         'product_id',

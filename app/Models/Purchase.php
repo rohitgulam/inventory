@@ -16,6 +16,7 @@ class Purchase extends Model
         'unit_sum',
         'credit',
         'creditor',
+        'paid_amount',
         'purchase_by',
         'purchase_from',
         'product_id',
