@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\ExpenditureController;
-use App\Http\Controllers\ExpenseController;
-use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SellController;
+use App\Http\Controllers\CreditController;
+use App\Http\Controllers\AccountController;
+use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PurchaseController;
-use App\Http\Controllers\PurchaseOrderController;
-use App\Http\Controllers\SellController;
+use App\Http\Controllers\ExpenditureController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -87,3 +88,28 @@ Route::get('expense/create', [ExpenditureController::class, 'create']);
 
 // Store
 Route::post('/expenditure', [ExpenditureController::class, 'store']);
+
+// Credit Routes
+Route::get('/credits', [CreditController::class, 'index']);
+
+// Show pay credit form
+Route::get('sells/{sell}/edit', [CreditController::class, 'edit']);
+
+// Pay credit
+Route::put('sells/{sell}', [CreditController::class, 'update']);
+
+// Reports
+Route::get('reports', [AccountController::class, 'index']);
+
+// AUTH ROUTES
+// Show register view
+Route::get('/register', [UserController::class, 'create']);
+
+// Create new user
+Route::post('/users', [UserController::class, 'store']);
+
+// Show login form
+Route::get('/login', [UserController::class, 'index']);
+
+// Show login form
+Route::post('/user/authenticate', [UserController::class, 'authenticate']);
