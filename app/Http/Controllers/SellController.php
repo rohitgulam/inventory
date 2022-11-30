@@ -6,6 +6,7 @@ use App\Models\Sell;
 use App\Models\Account;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use SebastianBergmann\Type\NullType;
 
 class SellController extends Controller
 {
@@ -42,6 +43,7 @@ class SellController extends Controller
             $order->sell_to = $request->sell_to;
             $order->sell_by = $request->sell_by;
             $order->profit = $productProfit;
+            $order->paid_amount = $order->credit == 0 ? NULL : 0;
             $orderArr = json_decode(json_encode($order), true);
             $tempProfitHolder += $productProfit ;
             
@@ -56,15 +58,17 @@ class SellController extends Controller
 
 
 
-        if ($todaysAccount->isEmpty()) {
-            Account::create([
-                'revenue' => $request->order_sum,
-            ]);
-        } else {
-            $todaysAccount[0]->revenue = $todaysAccount[0]->revenue + $request->order_sum;
-            $todaysAccount[0]->profit = $todaysAccount[0]->profit + $tempProfitHolder;
-
-            $todaysAccount[0]->save();
+        if ($order->credit == 0) {
+            if ($todaysAccount->isEmpty()) {
+                Account::create([
+                    'revenue' => $request->order_sum,
+                ]);
+            } else {
+                $todaysAccount[0]->revenue = $todaysAccount[0]->revenue + $request->order_sum;
+                $todaysAccount[0]->profit = $todaysAccount[0]->profit + $tempProfitHolder;
+    
+                $todaysAccount[0]->save();
+            }
         }
 
         return redirect('/sells')->with('message', 'Mauzo yamefanyika kikamilifu');
