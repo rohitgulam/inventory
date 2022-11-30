@@ -24,6 +24,7 @@ return new class extends Migration
             $table->unsignedBigInteger('product_id');
             $table->foreign('product_id')->references('id')->on('products');
             $table->integer('credit')->default(0);
+            $table->integer('paid_amount')->nullable();
             $table->string('sell_to')->nullable();
             $table->string('sell_by');
             $table->timestamp('purchase_date')->useCurrent();
