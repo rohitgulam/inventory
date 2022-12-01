@@ -8,7 +8,7 @@
 <div class="pt-12">
     <div class="w-12/12 flex flex-col items-center justify-center">
         <div class="flex justify-between w-full my-6">
-            <h2 class="text-3xl" >Orodha ya Manunuzi Yote</h2>
+            <h2 class="text-3xl" >Orodha ya Manunuzi Yote{{__('purchase list')}}</h2>
             
             <x-a-button  
                 class="bg-indigo-600 hover:bg-indigo-700"
@@ -19,15 +19,15 @@
             <thead>
                 <tr>
                     <th class="px-6 border border-gray-400 py-2 text-center" >#</th>
-                    <th class="px-6 border border-gray-400 py-2" >Jina la bidhaa</th>
-                    <th class="px-6 border border-gray-400 py-2">Idadi iliyonunuliwa</th>
-                    <th class="px-6 border border-gray-400 py-2" >Bei ya moja</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Bei ya jumla</th>
-                    <th class="px-6 border border-gray-400 py-2">Maelezo</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Imenunuliwa kwa mkopo</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Imenunuliwa kutoka kwa nani</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Nani aliyefanya manunuzi</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Siku manunuzi yaliyofanyika</th>
+                    <th class="px-6 border border-gray-400 py-2" >Jina la bidhaa{{__('product name')}}</th>
+                    <th class="px-6 border border-gray-400 py-2">Idadi iliyonunuliwa{{__('purchased quantity')}}</th>
+                    <th class="px-6 border border-gray-400 py-2" >Bei ya moja{{__('price for each')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >Bei ya jumla{{__('wholesale price')}}</th>
+                    <th class="px-6 border border-gray-400 py-2">Maelezo{{__('description')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >Imenunuliwa kwa mkopo{{__('bought on credit')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >Imenunuliwa kutoka kwa nani{{__('bought from')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >Nani aliyefanya manunuzi{{__('buyer')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >Siku manunuzi yaliyofanyika{{__('purchase day')}}</th>
                 </tr>
             </thead>
             <tbody class="text-gray-500">
