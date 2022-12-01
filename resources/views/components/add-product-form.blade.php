@@ -20,7 +20,7 @@
                     <label
                         for="name"
                         class="inline-block text-lg mb-2"
-                        >Jina la bidhaa{{__('Product Name')}}</label
+                        >{{__('Product Name')}}</label
                     >
                     <input
                         type="text"
@@ -39,7 +39,7 @@
                     <label
                         for="quality"
                         class="inline-block text-lg mb-2"
-                        >Ubora wa bidhaa{{__('Product Quality')}}</label
+                        >{{__('Product Quality')}}</label
                     >
                     <input
                         type="text"
@@ -58,7 +58,7 @@
                 <label
                     for="category"
                     class="inline-block text-lg mb-2"
-                    >Kategoria ya bidhaa{{__('Product category')}}</label
+                    >{{__('Product category')}}</label
                 >
                 <input
                     type="text"
@@ -118,7 +118,7 @@
                     for="metric"
                     class="inline-block text-lg mb-2"
                 >
-                    Uuzaji wa bidhaa{{__('Product Sale')}}
+                    {{__('Product Sale')}}
                 </label>
 
                 <select name="metric" id="metric" class="border border-gray-600 rounded p-2 w-full">
@@ -152,7 +152,7 @@
                 <label
                     for="description"
                     class="inline-block text-lg mb-2"
-                    >Maelezo ya bidhaa{{__('Product Description')}}</label
+                    >{{__('Product Description')}}</label
                 >
                 <textarea
                         class="border border-gray-600 rounded p-1 w-full"
