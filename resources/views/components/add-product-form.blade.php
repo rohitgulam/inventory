@@ -123,7 +123,7 @@
 
                 <select name="metric" id="metric" class="border border-gray-600 rounded p-2 w-full">
                     <option value="kilo">Kwa kilo</option>
-                    <option value="units">Moja moja</option>
+                    <option value="units">Units</option>
                 </select>
                 @error('metric')
                     <p class="text-red-500 text xs mt-1">{{$message}}</p>
