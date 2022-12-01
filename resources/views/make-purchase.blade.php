@@ -3,14 +3,14 @@
 @section('content')
 
 <div class="p-10 max-w-5xl mx-auto mt-16 bg-white rounded drop-shadow-2xl" >
-    <h2 class="text-xl pb-2 font-bold" >Fanya Manunuzi</h2>
+    <h2 class="text-xl pb-2 font-bold" >Fanya Manunuzi{{__('Make purchase')}}</h2>
     <form action="/purchases" method="post">
         @csrf
         <div class="">
             <label
                 for="name"
                 class="inline-block text-lg mb-2"
-                >Tafuta Bidhaa</label
+                >Tafuta Bidhaa{{__('find product')}}</label
             >
             <input
                 type="text"
@@ -34,9 +34,9 @@
             <thead>
                 <tr>
                     
-                    <th class="pr-12 pl-4 py-2" >Jina la bidhaa</th>
-                    <th class="pr-12 pl-4 py-2">Idadi</th>
-                    <th class="pr-12 pl-4 py-2">Bei ya kununua</th>
+                    <th class="pr-12 pl-4 py-2" >Jina la bidhaa{{__('product name')}}</th>
+                    <th class="pr-12 pl-4 py-2">Idadi{{__('quantity')}}</th>
+                    <th class="pr-12 pl-4 py-2">Bei ya kununua{{__('price')}}</th>
                     <th class="pr-12 pl-4 py-2"></th>
                 </tr>
                     
@@ -70,15 +70,15 @@
         </table>
 
         <div class="mt-40">
-            <h2 class="text-2xl">Oda ya bidhaa</h2>
+            <h2 class="text-2xl">Oda ya bidhaa{{__('product order')}}</h2>
             <table id="edit_table" class="table-auto text-left ">
                 <thead>
                     <tr>
                         
-                        <th class="pr-12 pl-4 py-2" >Jina la bidhaa</th>
-                        <th class="pr-12 pl-4 py-2">Idadi</th>
-                        <th class="pr-12 pl-4 py-2">Bei ya kununua</th>
-                        <th class="pr-12 pl-4 py-2">Jumla</th>
+                        <th class="pr-12 pl-4 py-2" >Jina la bidhaa{{__('product name')}}</th>
+                        <th class="pr-12 pl-4 py-2">Idadi{{__('quantity')}}</th>
+                        <th class="pr-12 pl-4 py-2">Bei ya kununua{{__('buying price')}}</th>
+                        <th class="pr-12 pl-4 py-2">Jumla{{__('total')}}</th>
                     </tr>
                 </thead>
                 <tbody id="orderedItems" class="text-gray-500">
@@ -86,7 +86,7 @@
                 </tbody>
             </table>
             <div class="flex justify-between w-4/5 px-5 border border-0 border-t-4 my-4" >
-                <span class="text-2xl font-bold" >Jumla ya oda</span>
+                <span class="text-2xl font-bold" >Jumla ya oda{{__('total order')}}</span>
                 <span class="text-2xl font-bold" id="orderSum">0</span>
             </div>
         </div>
@@ -125,7 +125,7 @@
                         <label
                             for="purchase_from"
                             class="inline-block text-lg mb-2"
-                            >Tumenunua kutoka kwa</label
+                            >Tumenunua kutoka kwa{{__('bought from')}}</label
                         >
                         <input
                             type="text"
@@ -145,7 +145,7 @@
                     <label
                         for="description"
                         class="inline-block text-lg mb-2"
-                        >Maelezo ya Oda</label
+                        >Maelezo ya Oda{{__('order description')}}</label
                     >
                     <textarea
                             class="border border-gray-600 rounded p-1 w-full"
@@ -159,13 +159,13 @@
                     <label
                         for="credit"
                         class="text-lg mb-2"
-                        >Sio mkopo</label
+                        >Sio mkopo{{__('Not loan')}}</label
                     >
                     <input type="radio" name="credit" id="credit" value="0" checked>
                     <label
                         for="non-credit"
                         class="ml-4 text-lg mb-2"
-                        >Mkopo</label
+                        >Mkopo{{__('loan')}}</label
                     >
                     <input type="radio" name="credit" id="non-credit" value="1">
                 </div>
