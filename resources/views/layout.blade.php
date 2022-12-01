@@ -24,56 +24,56 @@
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
                                     <a href="/" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>statistics</title><g stroke-width="1" stroke-linejoin="round" fill="none" stroke="currentColor" stroke-linecap="round" class="nc-icon-wrapper"><line x1="3.5" y1="12.5" x2="3.5" y2="9.5"></line><line x1="6.5" y1="5.5" x2="6.5" y2="12.5"></line><line x1="9.5" y1="12.5" x2="9.5" y2="9.5"></line><line x1="12.5" y1="5.5" x2="12.5" y2="12.5"></line><line x1="0.5" y1="14.5" x2="15.5" y2="14.5"></line><polyline points="13.5 0.5 9.5 4.5 6.5 1.5 2.5 5.5" stroke="currentColor"></polyline></g></svg>
-                                        <span class="text-sm ml-2">Muhtasari</span>
+                                        <span class="text-sm ml-2">{{ __('Dashboard') }}</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
                                     <a href="/sells" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>shopping bag</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><path d="M10.5,5.5V3 c0-1.381-1.119-2.5-2.5-2.5h0C6.619,0.5,5.5,1.619,5.5,3v2.5" data-cap="butt" stroke="currentColor"></path> <polygon points="14.5,15.5 1.5,15.5 2.5,5.5 13.5,5.5 " data-cap="butt"></polygon></g></svg>
-                                        <span class="text-sm ml-2">Mauzo</span>
+                                        <span class="text-sm ml-2">{{ __('Sales') }}</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
                                     <a href="/purchases" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>cart</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><circle cx="3" cy="14" r="1.5" data-cap="butt" stroke="currentColor"></circle> <circle cx="13" cy="14" r="1.5" data-cap="butt" stroke="currentColor"></circle> <polyline points="2.5,2.5 14.5,2.5 12.5,7.5 2.5,7.5 " data-cap="butt"></polyline> <polyline id="butt_41_" points=" 0.5,0.5 2.5,2.5 2.5,7.5 0.5,10.5 15.5,10.5 " data-cap="butt"></polyline></g>
                                         </svg>
-                                        <span class="text-sm ml-2">Manunuzi</span>
+                                        <span class="text-sm ml-2">{{ __('Purchases')}}</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
                                     <a href="/products" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>stack</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor"" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><polygon points="8,1.5 15.5,6 8,10.5 0.5,6 " data-cap="butt"></polygon> <polyline points="14,9.1 15.5,10 8,14.5 0.5,10 2,9.1 " data-cap="butt" stroke="currentColor""></polyline> </g></svg>
-                                        <span class="text-sm ml-2">Bidhaa</span>
+                                        <span class="text-sm ml-2">{{__('Products')}}</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
                                     <a href="/expenses" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                                        <span class="text-sm ml-2">Matumizi</span>
+                                        <span class="text-sm ml-2">{{__('Expenses')}}</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
                                     <a href="/transport" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-                                        <span class="text-sm ml-2">Transport</span>
+                                        <span class="text-sm ml-2">{{__('Transport')}}</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
                                     <a href="/credits" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
-                                        <span class="text-sm ml-2">Mikopo</span>
+                                        <span class="text-sm ml-2">{{__('Credits')}}</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
                                     <a href="/reports" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>file text</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="11.5" stroke="currentColor"></line> <line x1="4.5" y1="8.5" x2="11.5" y2="8.5" stroke="currentColor"></line> <line x1="4.5" y1="5.5" x2="6.5" y2="5.5" stroke="currentColor"></line> <polygon points="9.5,0.5 1.5,0.5 1.5,15.5 14.5,15.5 14.5,5.5 "></polygon> <polyline points="9.5,0.5 9.5,5.5 14.5,5.5 "></polyline></g></svg>
-                                        <span class="text-sm ml-2">Ripoti</span>
+                                        <span class="text-sm ml-2">{{__('Reports')}}</span>
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
                                     <a href="/register" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                                        <span class="text-sm ml-2">Users</span>
+                                        <span class="text-sm ml-2">{{__('Users')}}</span>
                                     </a>
                                 </li>
                                 
@@ -173,7 +173,7 @@
                                             <rect x="4" y="14" width="6" height="6" rx="1"></rect>
                                             <rect x="14" y="14" width="6" height="6" rx="1"></rect>
                                         </svg>
-                                        <span class="text-sm ml-2">Muhtasari</span>
+                                        <span class="text-sm ml-2">Dashboard</span>
                                     </a>
                                     <div class="py-1 px-3 bg-gray-600 rounded text-gray-300 flex items-center justify-center text-xs">5</div>
                                 </li>
@@ -352,7 +352,7 @@
                                         class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-2 px-4"
                                         id="add-expense-button"
                                     >
-                                        Ongeza Matumizi
+                                        {{__('Register Expenses')}}
                                     </button>
                                         
                                     <x-add-expense-form/>                                      
@@ -363,7 +363,7 @@
                                         class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-2 px-4"
                                         id="nav-add-product-button"
                                     >
-                                        Ongeza Bidhaa
+                                    {{__('Register Products')}}
                                     </button>
 
                                     <x-add-product-form/>                                       
