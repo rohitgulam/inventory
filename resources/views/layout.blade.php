@@ -4,20 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{-- <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                main: '#00253E',
-                opacity: 'rgba(0,0,0,0.3)'
-              }
-            }
-          }
-        }
-      </script> --}}
-      @vite('resources/css/app.css')
+    @vite('resources/css/app.css')
     <title>Inventory Management System</title>
 </head>
 <body class="bg-[#E5E5E5]" >
@@ -31,7 +18,7 @@
                     <div style="min-height: 100vh; position: fixed;" class="w-64 absolute sm:relative bg-gray-800 shadow md:h-full flex-col justify-between hidden sm:flex">
                         <div class="px-8">
                             <div class="h-16 w-full flex items-center">
-                                <h2 class="text-white text-2xl text center">KG Traders</h2>
+                                <h2 class="text-white text-2xl text center">KG Transporters</h2>
                             </div>
                             <ul class="mt-12">
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
@@ -72,9 +59,21 @@
                                     </a>
                                 </li>
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
+                                    <a href="/credits" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                                        <span class="text-sm ml-2">Mikopo</span>
+                                    </a>
+                                </li>
+                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
                                     <a href="/reports" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>file text</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="11.5" stroke="currentColor"></line> <line x1="4.5" y1="8.5" x2="11.5" y2="8.5" stroke="currentColor"></line> <line x1="4.5" y1="5.5" x2="6.5" y2="5.5" stroke="currentColor"></line> <polygon points="9.5,0.5 1.5,0.5 1.5,15.5 14.5,15.5 14.5,5.5 "></polygon> <polyline points="9.5,0.5 9.5,5.5 14.5,5.5 "></polyline></g></svg>
-                                        <span class="text-sm ml-2">Repoti</span>
+                                        <span class="text-sm ml-2">Ripoti</span>
+                                    </a>
+                                </li>
+                                <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
+                                    <a href="/register" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                                        <span class="text-sm ml-2">Users</span>
                                     </a>
                                 </li>
                                 
@@ -332,10 +331,21 @@
                     <!-- Remove class [ h-64 ] when adding a card block -->
                     <div style="width:100vw;" class="ml-64 pb-6 md:w-4/5 w-11/12">
                         <x-flash-message/>
-                        <header class="p-4 flex flex-row-reverse bg-white" >
-                            <div class="mx-6 py-2 px-4">
-                                Gulam
+                        <header class="p-4 flex flex-row-reverse justify-between bg-white" >
+                            @auth
+                            <div class="mx-6 py-2 px-4 flex">
+                                
+                                <p class="mr-8">Welcome, {{auth()->user()->name}}</p>
+
+                                <form action="/logout" method="POST" class="inline">
+                                    @csrf
+                                    <button type="submit" class="flex items-center">
+                                        <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg> 
+                                        <span class="ml-2">Logout</span>
+                                    </button>
+                                </form>
                             </div>
+                            @endauth
                             <div class="flex">
                                 <div class="mx-2">
                                     <button
