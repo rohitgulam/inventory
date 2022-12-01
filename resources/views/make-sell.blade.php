@@ -3,14 +3,14 @@
 @section('content')
 
 <div class="p-10 max-w-5xl mx-auto mt-16 bg-white rounded drop-shadow-2xl" >
-    <h2 class="text-xl pb-2 font-bold" >Fanya Mauzo</h2>
+    <h2 class="text-xl pb-2 font-bold" >Fanya Mauzo{{__('sell')}}</h2>
     <form action="/purchases" method="post">
         @csrf
         <div class="">
             <label
                 for="name"
                 class="inline-block text-lg mb-2"
-                >Tafuta Bidhaa</label
+                >Tafuta Bidhaa{{__('find product')}}</label
             >
             <input
                 type="text"
@@ -34,9 +34,9 @@
             <thead>
                 <tr>
                     
-                    <th class="pr-12 pl-4 py-2" >Jina la bidhaa</th>
-                    <th class="pr-12 pl-4 py-2">Idadi</th>
-                    <th class="pr-12 pl-4 py-2">Bei ya kuuza</th>
+                    <th class="pr-12 pl-4 py-2" >Jina la bidhaa{{__('product name')}}</th>
+                    <th class="pr-12 pl-4 py-2">Idadi{{__('quantity')}}</th>
+                    <th class="pr-12 pl-4 py-2">Bei ya kuuza{{__('selling price')}}</th>
                     <th class="pr-12 pl-4 py-2"></th>
                 </tr>
                     
@@ -70,15 +70,15 @@
         </table>
 
         <div class="mt-40">
-            <h2 class="text-2xl">Oda ya bidhaa</h2>
+            <h2 class="text-2xl">Oda ya bidhaa{{__('product order')}}</h2>
             <table id="edit_table" class="table-auto text-left ">
                 <thead>
                     <tr>
                         
-                        <th class="pr-12 pl-4 py-2" >Jina la bidhaa</th>
-                        <th class="pr-12 pl-4 py-2">Idadi</th>
-                        <th class="pr-12 pl-4 py-2">Bei ya kuuza</th>
-                        <th class="pr-12 pl-4 py-2">Jumla</th>
+                        <th class="pr-12 pl-4 py-2" >Jina la bidhaa{{__('product name')}}</th>
+                        <th class="pr-12 pl-4 py-2">Idadi{{__('quantity')}}</th>
+                        <th class="pr-12 pl-4 py-2">Bei ya kuuza{{__('selling price')}}</th>
+                        <th class="pr-12 pl-4 py-2">Jumla{{__('total')}}</th>
                     </tr>
                 </thead>
                 <tbody id="orderedItems" class="text-gray-500">
@@ -125,7 +125,7 @@
                         <label
                             for="sell_to"
                             class="inline-block text-lg mb-2"
-                            >Tunauza kwa</label
+                            >Tunauza kwa{{__('buyer')}}</label
                         >
                         <input
                             type="text"
@@ -145,7 +145,7 @@
                     <label
                         for="description"
                         class="inline-block text-lg mb-2"
-                        >Maelezo ya Oda</label
+                        >Maelezo ya Oda{{__('order description')}}</label
                     >
                     <textarea
                             class="border border-gray-600 rounded p-1 w-full"
@@ -159,13 +159,13 @@
                     <label
                         for="credit"
                         class="text-lg mb-2"
-                        >Sio mkopo</label
+                        >Sio mkopo{{__('not loan')}}</label
                     >
                     <input type="radio" name="credit" id="credit" value="0" checked>
                     <label
                         for="non-credit"
                         class="ml-4 text-lg mb-2"
-                        >Mkopo</label
+                        >Mkopo{{__('loan')}}</label
                     >
                     <input type="radio" name="credit" id="non-credit" value="1">
                 </div>
@@ -174,7 +174,7 @@
                     Fanya Mauzo
                 </button>
                 <button id="clearAllOrders" type="reset" class="my-2 mx-4 text-white rounded py-2 px-4 bg-red-600 hover:bg-red-700">
-                    Futa oda yote
+                    Futa oda yote{{__('delete order')}}
                 </button>
             </form>
         </div>
