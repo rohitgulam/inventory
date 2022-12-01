@@ -54,10 +54,7 @@ class SellController extends Controller
             $product->save();
 
         }
-        // dd($tempProfitHolder);
-
-
-
+        
         if ($order->credit == 0) {
             if ($todaysAccount->isEmpty()) {
                 Account::create([
@@ -65,7 +62,13 @@ class SellController extends Controller
                 ]);
             } else {
                 $todaysAccount[0]->revenue = $todaysAccount[0]->revenue + $request->order_sum;
-                $todaysAccount[0]->profit = $todaysAccount[0]->profit + $tempProfitHolder;
+                
+
+                if($tempProfitHolder > 0){
+                    $todaysAccount[0]->profit = $todaysAccount[0]->profit + $tempProfitHolder;
+                }else{
+                    $todaysAccount[0]->loss = $todaysAccount[0]->loss + $tempProfitHolder;
+                }
     
                 $todaysAccount[0]->save();
             }

@@ -11,7 +11,9 @@ class Account extends Model
 
     protected $fillable = [
         'revenue',
-        'expenses'
+        'expenses',
+        'profit',
+        'loss',
     ];
 
     protected $dateFormat = 'Y-m-d';

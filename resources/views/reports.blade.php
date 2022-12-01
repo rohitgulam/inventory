@@ -14,6 +14,7 @@
                     <th class="px-6 border border-gray-400 py-2">Mapato </th>
                     <th class="px-6 border border-gray-400 py-2" >Matumizi</th>
                     <th class="px-6 border border-gray-400 py-2 text-center" >Faida</th> 
+                    <th class="px-6 border border-gray-400 py-2 text-center" >Hasara</th> 
                     {{-- <th class="px-6 border border-gray-400 py-2">Mhusika</th>
                     <th class="px-6 border border-gray-400 py-2 text-center" >Siku</th>
                     <th class="px-6 border border-gray-400 py-2 text-center" ></th>
@@ -30,6 +31,7 @@
                         <td class="pr-12 pl-4 border border-gray-400 py-2"> @money($account->revenue) </td>
                         <td class="pr-12 pl-4 border border-gray-400 py-2 text-red-500"> @money($account->expenses) </td>
                         <td class="pr-12 pl-4 border border-gray-400 py-2 text-green-500"> @money($account->profit) </td>
+                        <td class="pr-12 pl-4 border border-gray-400 py-2 text-red-500"> @money($account->loss) </td>
                         {{-- <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$account->sell_to}} </td>
                         <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$account->created_at}} </td> 
                         <td class="pr-12 pl-4 border border-gray-400 py-2">

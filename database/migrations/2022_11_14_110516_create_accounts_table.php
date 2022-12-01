@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('revenue')->default(0);
             $table->integer('expenses')->default(0);
             $table->integer('profit')->default(0);
+            $table->integer('loss')->default(0);
             $table->timestamps();
         });
     }
