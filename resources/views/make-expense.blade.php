@@ -3,14 +3,14 @@
 @section('content')
 
 <div class="p-10 max-w-5xl mx-auto mt-16 bg-white rounded drop-shadow-2xl" >
-    <h2 class="text-xl pb-2 font-bold" >Fanya Matumizi</h2>
+    <h2 class="text-xl pb-2 font-bold" >Fanya Matumizi{{__('purchase')}}</h2>
     <form action="/expenditure" method="post">
         @csrf
         <div class="">
             <label
                 for="name"
                 class="inline-block text-lg mb-2"
-                >Tafuta Matumizi</label
+                >Tafuta Matumizi{{__('Find purchases')}}</label
             >
             <input
                 type="text"
@@ -68,13 +68,13 @@
         </table>
 
         <div class="mt-40">
-            <h2 class="text-2xl">Oda ya bidhaa</h2>
+            <h2 class="text-2xl">Oda ya bidhaa{{__('Product order')}}</h2>
             <table id="edit_table" class="table-auto text-left ">
                 <thead>
                     <tr>
                         
-                        <th class="pr-12 pl-4 py-2" >Jina la matumizi</th>
-                        <th class="pr-12 pl-4 py-2">Bei</th>
+                        <th class="pr-12 pl-4 py-2" >Jina la matumizi{{__('purchase name')}}</th>
+                        <th class="pr-12 pl-4 py-2">Bei{{__('price')}}</th>
                     </tr>
                 </thead>
                 <tbody id="orderedItems" class="text-gray-500">
@@ -82,7 +82,7 @@
                 </tbody>
             </table>
             <div class="flex justify-between w-4/5 px-5 border border-0 border-t-4 my-4" >
-                <span class="text-2xl font-bold" >Jumla ya matumizi</span>
+                <span class="text-2xl font-bold" >Jumla ya matumizi{{__('total purchase')}}</span>
                 <span class="text-2xl font-bold" id="orderSum">0</span>
             </div>
         </div>
@@ -119,7 +119,7 @@
                         <label
                             for="purchase_from"
                             class="inline-block text-lg mb-2"
-                            >Tumenunua kutoka kwa</label
+                            >Tumenunua kutoka kwa{{__('bought from')}}</label
                         >
                         <input
                             type="text"
@@ -139,7 +139,7 @@
                     <label
                         for="description"
                         class="inline-block text-lg mb-2"
-                        >Maelezo ya matumizi</label
+                        >Maelezo ya matumizi{{__('purchase description')}}</label
                     >
                     <textarea
                             class="border border-gray-600 rounded p-1 w-full"
@@ -153,7 +153,7 @@
                     <label
                         for="credit"
                         class="text-lg mb-2"
-                        >Sio mkopo</label
+                        >Sio mkopo{{__('Not loan')}}</label
                     >
                     <input type="radio" name="credit" id="credit" value="0" checked>
                     <label
@@ -273,7 +273,7 @@
 
                 order_sum = order_sum + expense_inputJS;
                 }else{
-                    alert('Hili tumizi ushaliweka tayari. Kama unataka kuongeza, futa kwanza iliyopo')
+                    alert('Hili tumizi ushaliweka tayari. Kama unataka kuongeza, futa kwanza iliyopo'{{__('This purchase is already selected. If you want to add, first delete the existing one')}})
                 }
 
 
