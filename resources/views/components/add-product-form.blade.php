@@ -20,7 +20,7 @@
                     <label
                         for="name"
                         class="inline-block text-lg mb-2"
-                        >Jina la bidhaa{{(__'Product Name')}}</label
+                        >Jina la bidhaa{{__('Product Name')}}</label
                     >
                     <input
                         type="text"
