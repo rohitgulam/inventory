@@ -12,16 +12,16 @@
             <thead>
                 <tr>
                     <th class="px-6 border border-gray-400 py-2 text-center" >#</th>
-                    <th class="px-6 border border-gray-400 py-2" >Jina la bidhaa{{__('Product Name')}}</th>
-                    <th class="px-6 border border-gray-400 py-2">Jumla ya deni{{__('Total Debt')}}</th>
-                    <th class="px-6 border border-gray-400 py-2" >Pesa iliyolipwa{{__('Paid Amount')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Pesa iliyobaki{{__('Balance')}}</th> 
-                    <th class="px-6 border border-gray-400 py-2">Mhusika{{__('User')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Siku{{__('Day')}}</th>
+                    <th class="px-6 border border-gray-400 py-2" >{{__('Product Name')}}</th>
+                    <th class="px-6 border border-gray-400 py-2">{{__('Total Debt')}}</th>
+                    <th class="px-6 border border-gray-400 py-2" >{{__('Paid Amount')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Balance')}}</th> 
+                    <th class="px-6 border border-gray-400 py-2">{{__('User')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Day')}}</th>
                     <th class="px-6 border border-gray-400 py-2 text-center" ></th>
-                    {{-- <th class="px-6 border border-gray-400 py-2 text-center" >Imeuzwa kwa mkopo{{__('Sold on credit')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Imeuzwa kwa nani{{__('Buyer')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Nani aliyefanya mauzo{{__('Seller')}}</th>--}}
+                    {{-- <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Sold on credit')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Buyer')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Seller')}}</th>--}}
                 </tr>
             </thead>
             <tbody class="text-gray-500">
