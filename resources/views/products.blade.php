@@ -4,18 +4,18 @@
 
     <div class="pt-24">
         <div class="w-11/12 flex flex-col items-center justify-center">
-            <h2 class="text-3xl py-6" >Orodha ya bidhaa zote</h2>
+            <h2 class="text-3xl py-6" >Orodha ya bidhaa zote{{__('product list')}}</h2>
             <table id="datatable" class="table-auto text-left border border-collapse border-gray-400">
                 <thead>
                     <tr>
                         <th class="pr-12 pl-4 border border-gray-400 py-2 text-center" >#</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2" >Jina la bidhaa</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2">Ubora</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2">Kategoria</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2">Bei ya kuuza</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2">Idadi iliyopo store</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2" >Maelezo</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2 text-center" >Vitendo</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2" >Jina la bidhaa{{__('product name')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2">Ubora{{__('quality')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2">Kategoria{{__('category')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2">Bei ya kuuza{{__('selling price')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2">Idadi iliyopo store{{__('available stock')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2" >Maelezo{{__('description')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2 text-center" >Vitendo{{__('action')}}</th>
                     </tr>
                 </thead>
                 <tbody class="text-gray-500">
