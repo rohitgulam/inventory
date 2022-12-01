@@ -12,7 +12,7 @@
 
 
 
-<h2 class="text-xl pb-2 font-bold" >Ongeza Matumizi</h2>
+<h2 class="text-xl pb-2 font-bold" >{{__('Register Expenses')}}</h2>
     <form action="/expenses" method="post">
         @csrf
 
@@ -20,7 +20,7 @@
             <label
                 for="name"
                 class="inline-block text-lg mb-2"
-                >Jina la matumizi</label
+                >{{__('Expense Name')}}</label
             >
             <input
                 type="text"
@@ -37,7 +37,7 @@
         </div>
             <x-button 
                 class="bg-indigo-600 hover:bg-indigo-700"
-                name="Ongeza" 
+                name="{{__('Add')}}" 
             />
         </form>
     </div>
