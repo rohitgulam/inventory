@@ -4,23 +4,23 @@
 <div class="pt-12">
     <div class="w-12/12 flex flex-col ">
         <div class="flex justify-between w-full my-6">
-            <h2 class="text-3xl" >Akaunti za kila siku</h2>
+            <h2 class="text-3xl" >Akaunti za kila siku{{__('daily accounts')}}</h2>
         </div>
         <table class="table-auto text-left border border-collapse border-gray-400">
             <thead>
                 <tr>
                     <th class="px-6 border border-gray-400 py-2 text-center" >#</th>
-                    <th class="px-6 border border-gray-400 py-2" >Siku</th>
-                    <th class="px-6 border border-gray-400 py-2">Mapato </th>
-                    <th class="px-6 border border-gray-400 py-2" >Matumizi</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Faida</th> 
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Hasara</th> 
-                    {{-- <th class="px-6 border border-gray-400 py-2">Mhusika</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Siku</th>
+                    <th class="px-6 border border-gray-400 py-2" >Siku{{__('day')}}</th>
+                    <th class="px-6 border border-gray-400 py-2">Mapato {{__('income')}}</th>
+                    <th class="px-6 border border-gray-400 py-2" >Matumizi{{__('enpenditures')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >Faida{{__('profit')}}</th> 
+                    <th class="px-6 border border-gray-400 py-2 text-center" >Hasara{{__('loss')}}</th> 
+                    {{-- <th class="px-6 border border-gray-400 py-2">Mhusika{{__('user')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >Siku{{__('day')}}</th>
                     <th class="px-6 border border-gray-400 py-2 text-center" ></th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Imeuzwa kwa mkopo</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Imeuzwa kwa nani</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Nani aliyefanya mauzo</th>--}}
+                    <th class="px-6 border border-gray-400 py-2 text-center" >Imeuzwa kwa mkopo{{__('sold on credit')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >Imeuzwa kwa nani{{__('sold to')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >Nani aliyefanya mauzo{{__('seller')}}</th>--}}
                 </tr>
             </thead>
             <tbody class="text-gray-500">
