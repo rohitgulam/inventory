@@ -23,93 +23,96 @@ use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('dashboard');
-});
+})->middleware('auth');
 
 // Product Routes
-Route::get('/products', [ProductController::class, 'index']);
+Route::get('/products', [ProductController::class, 'index'])->middleware('auth');
 
-Route::post('/products', [ProductController::class, 'store']);
+Route::post('/products', [ProductController::class, 'store'])->middleware('auth');
 
-Route::delete('products/{product}', [ProductController::class, 'destroy']);
+Route::delete('products/{product}', [ProductController::class, 'destroy'])->middleware('auth');
 
-Route::get('products/{product}/edit', [ProductController::class, 'edit']);
+Route::get('products/{product}/edit', [ProductController::class, 'edit'])->middleware('auth');
 
-Route::put('products/{product}', [ProductController::class, 'update']);
+Route::put('products/{product}', [ProductController::class, 'update'])->middleware('auth');
 
 // Add Bonus to product
 // Show add bonus page
-Route::put('products/bonus/{product}/edit', [ProductController::class, 'editBonus']);
+Route::put('products/bonus/{product}/edit', [ProductController::class, 'editBonus'])->middleware('auth');
 
-Route::put('products/bonus/{product}', [ProductController::class, 'addBonus']);
+Route::put('products/bonus/{product}', [ProductController::class, 'addBonus'])->middleware('auth');
 
 // Purchases Routes
-Route::get('/purchases', [PurchaseController::class, 'index']);
+Route::get('/purchases', [PurchaseController::class, 'index'])->middleware('auth');
 
-Route::get('/purchase/create', [PurchaseController::class, 'create']);
+Route::get('/purchase/create', [PurchaseController::class, 'create'])->middleware('auth');
 
-Route::post('/purchases', [PurchaseController::class, 'store']);
+Route::post('/purchases', [PurchaseController::class, 'store'])->middleware('auth');
 
 
 // Search product 
-Route::post('/searchproduct', [PurchaseController::class, 'searchProduct']);
+Route::post('/searchproduct', [PurchaseController::class, 'searchProduct'])->middleware('auth');
 
 
 // Purchase Order Routes
 
 // Create purchase order
-Route::post('purchase/order/create', [PurchaseController::class, 'store']);
+Route::post('purchase/order/create', [PurchaseController::class, 'store'])->middleware('auth');
 
 // Sales Routes
 
 // Index 
-Route::get('sells', [SellController::class, 'index']);
+Route::get('sells', [SellController::class, 'index'])->middleware('auth');
 
 //Show create sell
-Route::get('/sell/create', [SellController::class, 'create']);
+Route::get('/sell/create', [SellController::class, 'create'])->middleware('auth');
 
 // sell order
-Route::post('sell/order/create', [SellController::class, 'store']);
+Route::post('sell/order/create', [SellController::class, 'store'])->middleware('auth');
 
 // Expenses Routes
 // Index
-Route::get('expenses', [ExpenditureController::class, 'index']);
+Route::get('expenses', [ExpenditureController::class, 'index'])->middleware('auth');
 
 // Search expens
-Route::post('searchexpense', [ExpenseController::class, 'searchExpense']);
+Route::post('searchexpense', [ExpenseController::class, 'searchExpense'])->middleware('auth');
 
 // Create expense
-Route::post('expenses', [ExpenseController::class, 'store']);
+Route::post('expenses', [ExpenseController::class, 'store'])->middleware('auth');
 
 // Create expense
-Route::post('expenses', [ExpenseController::class, 'store']);
+Route::post('expenses', [ExpenseController::class, 'store'])->middleware('auth');
 
 // Show make expenses(expenditure) form 
-Route::get('expense/create', [ExpenditureController::class, 'create']);
+Route::get('expense/create', [ExpenditureController::class, 'create'])->middleware('auth');
 
 // Store
-Route::post('/expenditure', [ExpenditureController::class, 'store']);
+Route::post('/expenditure', [ExpenditureController::class, 'store'])->middleware('auth');
 
 // Credit Routes
-Route::get('/credits', [CreditController::class, 'index']);
+Route::get('/credits', [CreditController::class, 'index'])->middleware('auth');
 
 // Show pay credit form
-Route::get('sells/{sell}/edit', [CreditController::class, 'edit']);
+Route::get('sells/{sell}/edit', [CreditController::class, 'edit'])->middleware('auth');
 
 // Pay credit
-Route::put('sells/{sell}', [CreditController::class, 'update']);
+Route::put('sells/{sell}', [CreditController::class, 'update'])->middleware('auth');
 
 // Reports
-Route::get('reports', [AccountController::class, 'index']);
+Route::get('reports', [AccountController::class, 'index'])->middleware('auth');
 
 // AUTH ROUTES
 // Show register view
-Route::get('/register', [UserController::class, 'create']);
+Route::get('/register', [UserController::class, 'create'])->middleware('auth');
 
 // Create new user
-Route::post('/users', [UserController::class, 'store']);
+Route::post('/users', [UserController::class, 'store'])->middleware('auth');
 
 // Show login form
-Route::get('/login', [UserController::class, 'index']);
+Route::get('/login', [UserController::class, 'index'])->name('login')->middleware('guest');
 
 // Show login form
-Route::post('/user/authenticate', [UserController::class, 'authenticate']);
+Route::post('/user/authenticate', [UserController::class, 'authenticate'])->middleware('guest');
+
+// Logout
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
