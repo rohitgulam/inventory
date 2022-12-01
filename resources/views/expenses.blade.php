@@ -8,7 +8,7 @@
             
             <a href="expense/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > Fanya Matumizi </a>
         </div>
-        <table class="table-auto text-left border border-collapse border-gray-400">
+        <table id="datatable" class="table-auto text-left border border-collapse border-gray-400">
             <thead>
                 <tr>
                     <th class="px-6 border border-gray-400 py-2 text-center" >#</th>
@@ -56,4 +56,5 @@
         </table>
     </div>
 </div>
+@vite('resources/js/table.js')
 @endsection
