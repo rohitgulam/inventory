@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="p-10 max-w-lg mx-auto mt-24 bg-white rounded drop-shadow-2xl" >
-    <h2 class="text-xl pb-2 font-bold" >Ongeza bidhaa</h2>
+    <h2 class="text-xl pb-2 font-bold" >Ongeza bidhaa{{__('Add product')}}</h2>
     <form action="/products/{{$product->id}}" method="post">
         @csrf
         @method('PUT')
@@ -11,7 +11,7 @@
         <label
             for="name"
             class="inline-block text-lg mb-2"
-            >Jina la bidhaa</label
+            >Jina la bidhaa{{__('Product name')}}</label
         >
         <input
             type="text"
@@ -31,7 +31,7 @@
         <label
             for="quantity"
             class="inline-block text-lg mb-2"
-            >Idadi ya bidhaa</label
+            >Idadi ya bidhaa{{__('Product quantity')}}</label
         >
         <input
             type="number"
@@ -49,7 +49,7 @@
             <label
                 for="category"
                 class="inline-block text-lg mb-2"
-                >Kategoria ya bidhaa</label
+                >Kategoria ya bidhaa{{__('Product category')}}</label
             >
             <input
                 type="text"
@@ -71,7 +71,7 @@
             <label
                 for="description"
                 class="inline-block text-lg mb-2"
-                >Maelezo ya bidhaa</label
+                >Maelezo ya bidhaa{{__('Product description')}}</label
         >
             <textarea
                     class="border border-gray-600 rounded p-1 w-full"
