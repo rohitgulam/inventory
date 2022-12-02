@@ -13,8 +13,8 @@
                 <tr>
                     <th class="px-6 border border-gray-400 py-2 text-center" >#</th>
                     <th class="px-6 border border-gray-400 py-2" >{{__('Expense name')}}</th>
-                    <th class="px-6 border border-gray-400 py-2">{{__('total')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Daily expenses')}}</th> 
+                    <th class="px-6 border border-gray-400 py-2">{{__('Amount')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Date')}}</th> 
                     {{-- <th class="px-6 border border-gray-400 py-2" >{{__('single expense price')}}</th>
                     <th class="px-6 border border-gray-400 py-2 text-center" >{{__('total expenses')}}</th>
                     <th class="px-6 border border-gray-400 py-2">{{__('Description')}}</th>
