@@ -4,7 +4,7 @@
 <div class="pt-12">
     <div class="w-12/12 flex flex-col ">
         <div class="flex justify-between w-full my-6">
-            <h2 class="text-3xl" >Orodha ya Matumizi Yote{{__('List of all uses')}}</h2>
+            <h2 class="text-3xl" >{{__('List of all uses')}}</h2>
             
             <a href="expense/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > Fanya Matumizi </a>
         </div>
