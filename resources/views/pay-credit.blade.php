@@ -4,7 +4,7 @@
 
 
 <div class="p-10 max-w-lg mx-auto mt-24 bg-white rounded drop-shadow-2xl" >
-    <h2 class="text-xl pb-2 font-bold" >Lipa Deni{{__('pay loan')}}</h2>
+    <h2 class="text-xl pb-2 font-bold" >{{__('pay loan')}}</h2>
     <form action="/sells/{{$product->id}}" method="post">
         @csrf
         @method('PUT')
@@ -12,7 +12,7 @@
         <label
             for="product"
             class="inline-block text-lg mb-2"
-            >Jina la bidhaa{{__('product name')}}</label
+            >{{__('product name')}}</label
         >
         <input
             type="text"
@@ -52,7 +52,7 @@
             <label
                 for="paid_amount"
                 class="inline-block text-lg mb-2"
-                >Pesa inayolipwa{{__('available funds')}}</label
+                >{{__('available funds')}}</label
             >
             <input
                 type="text"
