@@ -8,6 +8,7 @@ use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PurchaseController;
 use App\Http\Controllers\ExpenditureController;
+use App\Http\Controllers\TransportController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -116,3 +117,10 @@ Route::post('/user/authenticate', [UserController::class, 'authenticate'])->midd
 
 // Logout
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
+
+// TRANSPORT ROUTES
+Route::get('/transport', [TransportController::class, 'index'])->middleware('auth');
+// Get create form 
+Route::get('/transport/create', [TransportController::class, 'create'])->middleware('auth');
+// Store 
+Route::POST('/transport/make', [TransportController::class, 'store'])->middleware('auth');
