@@ -1,9 +1,8 @@
 @extends('layout')
 
 @section('content')
-<p>
-
-    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus ipsa asperiores consectetur et dolorem porro earum maiores quaerat ab enim. lorem600
+<p class="text-center text-2xl">
+    Welcome, you can start making records and transactions
 </p>
     
 @endsection
