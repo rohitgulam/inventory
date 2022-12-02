@@ -12,7 +12,7 @@
             
             <a href="sell/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > Fanya Mauzo </a>
         </div>
-        <table id="datatable" class="table-auto text-left border border-collapse border-gray-400">
+        <table id="print-table" class="display">
             <thead>
                 <tr>
                     <th class="px-6 border border-gray-400 py-2 text-center" >#</th>
@@ -59,5 +59,18 @@
         </table>
     </div>
 </div>
-@vite('resources/js/table.js')
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.3.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.3.2/js/buttons.print.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('#print-table').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'print'
+        ]
+    } );
+} );
+</script>
 @endsection
