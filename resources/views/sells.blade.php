@@ -8,7 +8,7 @@
 <div class="pt-12">
     <div class="w-12/12 flex flex-col items-center justify-center">
         <div class="flex justify-between w-full my-6">
-            <h2 class="text-3xl" >Orodha ya Mauzo Yote</h2>
+            <h2 class="text-3xl" >{{__('purchase list')}}</h2>
             
             <a href="sell/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > Fanya Mauzo </a>
         </div>
@@ -16,15 +16,15 @@
             <thead>
                 <tr>
                     <th class="px-6 border border-gray-400 py-2 text-center" >#</th>
-                    <th class="px-6 border border-gray-400 py-2" >Jina la bidhaa</th>
-                    <th class="px-6 border border-gray-400 py-2">Idadi iliyouzwa</th>
-                    <th class="px-6 border border-gray-400 py-2" >Bei ya moja</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Bei ya jumla</th>
-                    <th class="px-6 border border-gray-400 py-2">Maelezo</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Imeuzwa kwa mkopo</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Imeuzwa kwa nani</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Nani aliyefanya mauzo</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >Siku mauzo yaliyofanyika</th>
+                    <th class="px-6 border border-gray-400 py-2" >{{__('product name')}}</th>
+                    <th class="px-6 border border-gray-400 py-2">{{__('quantity sold')}}</th>
+                    <th class="px-6 border border-gray-400 py-2" >{{__('each price')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('wholesale price')}}</th>
+                    <th class="px-6 border border-gray-400 py-2">{{__('description')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('sold on credit')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('sold to')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('seller')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('purchase day')}}</th>
                 </tr>
             </thead>
             <tbody class="text-gray-500">
