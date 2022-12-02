@@ -3,14 +3,14 @@
 @section('content')
 
 <div class="p-10 max-w-5xl mx-auto mt-16 bg-white rounded drop-shadow-2xl" >
-    <h2 class="text-xl pb-2 font-bold" >Fanya Mauzo{{__('sell')}}</h2>
+    <h2 class="text-xl pb-2 font-bold" >{{__('sell')}}</h2>
     <form action="/purchases" method="post">
         @csrf
         <div class="">
             <label
                 for="name"
                 class="inline-block text-lg mb-2"
-                >Tafuta Bidhaa{{__('find product')}}</label
+                >{{__('find product')}}</label
             >
             <input
                 type="text"
@@ -34,9 +34,9 @@
             <thead>
                 <tr>
                     
-                    <th class="pr-12 pl-4 py-2" >Jina la bidhaa{{__('product name')}}</th>
-                    <th class="pr-12 pl-4 py-2">Idadi{{__('quantity')}}</th>
-                    <th class="pr-12 pl-4 py-2">Bei ya kuuza{{__('selling price')}}</th>
+                    <th class="pr-12 pl-4 py-2" >{{__('product name')}}</th>
+                    <th class="pr-12 pl-4 py-2">{{__('quantity')}}</th>
+                    <th class="pr-12 pl-4 py-2">{{__('selling price')}}</th>
                     <th class="pr-12 pl-4 py-2"></th>
                 </tr>
                     
@@ -75,10 +75,10 @@
                 <thead>
                     <tr>
                         
-                        <th class="pr-12 pl-4 py-2" >Jina la bidhaa{{__('product name')}}</th>
-                        <th class="pr-12 pl-4 py-2">Idadi{{__('quantity')}}</th>
-                        <th class="pr-12 pl-4 py-2">Bei ya kuuza{{__('selling price')}}</th>
-                        <th class="pr-12 pl-4 py-2">Jumla{{__('total')}}</th>
+                        <th class="pr-12 pl-4 py-2" >{{__('product name')}}</th>
+                        <th class="pr-12 pl-4 py-2">{{__('quantity')}}</th>
+                        <th class="pr-12 pl-4 py-2">{{__('selling price')}}</th>
+                        <th class="pr-12 pl-4 py-2">{{__('total')}}</th>
                     </tr>
                 </thead>
                 <tbody id="orderedItems" class="text-gray-500">
@@ -125,7 +125,7 @@
                         <label
                             for="sell_to"
                             class="inline-block text-lg mb-2"
-                            >Tunauza kwa{{__('buyer')}}</label
+                            >{{__('buyer')}}</label
                         >
                         <input
                             type="text"
@@ -145,7 +145,7 @@
                     <label
                         for="description"
                         class="inline-block text-lg mb-2"
-                        >Maelezo ya Oda{{__('order description')}}</label
+                        >{{__('order description')}}</label
                     >
                     <textarea
                             class="border border-gray-600 rounded p-1 w-full"
@@ -159,7 +159,7 @@
                     <label
                         for="credit"
                         class="text-lg mb-2"
-                        >Sio mkopo{{__('not loan')}}</label
+                        >{{__('not loan')}}</label
                     >
                     <input type="radio" name="credit" id="credit" value="0" checked>
                     <label
