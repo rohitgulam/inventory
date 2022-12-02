@@ -12,7 +12,7 @@
 
 
 
-<h2 class="text-xl pb-2 font-bold" >{{(__'Add Product')}}</h2>
+<h2 class="text-xl pb-2 font-bold" >{{__('Add Product')}}</h2>
     <form action="/products" method="post">
         @csrf
             <div class="flex">
