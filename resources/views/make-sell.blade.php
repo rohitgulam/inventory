@@ -62,7 +62,7 @@
                         </td>
                         <td>
                             <button id="confirm_order" class="rounded py-2 px-4 bg-gray-300 text-black">
-                                Ongeza
+                                {{__('Add')}}
                             </button>
                         </td>
                     </tr>
@@ -70,7 +70,7 @@
         </table>
 
         <div class="mt-40">
-            <h2 class="text-2xl">Oda ya bidhaa{{__('product order')}}</h2>
+            <h2 class="text-2xl">{{__('product order')}}</h2>
             <table id="edit_table" class="table-auto text-left ">
                 <thead>
                     <tr>
@@ -86,7 +86,7 @@
                 </tbody>
             </table>
             <div class="flex justify-between w-4/5 px-5 border border-0 border-t-4 my-4" >
-                <span class="text-2xl font-bold" >Jumla ya oda</span>
+                <span class="text-2xl font-bold" >{{__('Total Order')}}</span>
                 <span class="text-2xl font-bold" id="orderSum">0</span>
             </div>
         </div>
@@ -165,16 +165,16 @@
                     <label
                         for="non-credit"
                         class="ml-4 text-lg mb-2"
-                        >Mkopo{{__('loan')}}</label
+                        >{{__('loan')}}</label
                     >
                     <input type="radio" name="credit" id="non-credit" value="1">
                 </div>
 
                 <button type="submit" class="my-2 text-white rounded py-2 px-4 bg-indigo-600 hover:bg-indigo-700">
-                    Fanya Mauzo
+                    {{__('Make Sell')}}
                 </button>
                 <button id="clearAllOrders" type="reset" class="my-2 mx-4 text-white rounded py-2 px-4 bg-red-600 hover:bg-red-700">
-                    Futa oda yote{{__('delete order')}}
+                    {{__('Clear order')}}
                 </button>
             </form>
         </div>

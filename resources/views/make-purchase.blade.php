@@ -10,7 +10,7 @@
             <label
                 for="name"
                 class="inline-block text-lg mb-2"
-                >Tafuta Bidhaa{{__('find product')}}</label
+                >{{__('Find Product')}}</label
             >
             <input
                 type="text"
@@ -62,7 +62,7 @@
                         </td>
                         <td>
                             <button id="confirm_order" class="rounded py-2 px-4 bg-gray-300 text-black">
-                                Ongeza
+                                {{__('Add')}}
                             </button>
                         </td>
                     </tr>
@@ -86,7 +86,7 @@
                 </tbody>
             </table>
             <div class="flex justify-between w-4/5 px-5 border border-0 border-t-4 my-4" >
-                <span class="text-2xl font-bold" >{{__('total order')}}</span>
+                <span class="text-2xl font-bold" >{{__('Total Order')}}</span>
                 <span class="text-2xl font-bold" id="orderSum">0</span>
             </div>
         </div>
@@ -125,7 +125,7 @@
                         <label
                             for="purchase_from"
                             class="inline-block text-lg mb-2"
-                            >Tumenunua kutoka kwa{{__('bought from')}}</label
+                            >{{__('bought from')}}</label
                         >
                         <input
                             type="text"
@@ -145,7 +145,7 @@
                     <label
                         for="description"
                         class="inline-block text-lg mb-2"
-                        >Maelezo ya Oda{{__('order description')}}</label
+                        >{{__('order description')}}</label
                     >
                     <textarea
                             class="border border-gray-600 rounded p-1 w-full"
@@ -159,22 +159,22 @@
                     <label
                         for="credit"
                         class="text-lg mb-2"
-                        >Sio mkopo{{__('Not loan')}}</label
+                        >{{__('Not loan')}}</label
                     >
                     <input type="radio" name="credit" id="credit" value="0" checked>
                     <label
                         for="non-credit"
                         class="ml-4 text-lg mb-2"
-                        >Mkopo{{__('loan')}}</label
+                        >{{__('loan')}}</label
                     >
                     <input type="radio" name="credit" id="non-credit" value="1">
                 </div>
 
                 <button type="submit" class="my-2 text-white rounded py-2 px-4 bg-indigo-600 hover:bg-indigo-700">
-                    Fanya Manunuzi
+                    {{__('Make Purchases')}}
                 </button>
                 <button id="clearAllOrders" type="reset" class="my-2 mx-4 text-white rounded py-2 px-4 bg-red-600 hover:bg-red-700">
-                    Futa oda yote
+                    {{__('Clear Order')}}
                 </button>
             </form>
         </div>
