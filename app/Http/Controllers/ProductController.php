@@ -10,7 +10,7 @@ class ProductController extends Controller
     // show all products
     public function index(){
         return view('products', [
-            'products' => Product::latest()->paginate(20)
+            'products' => Product::latest()->paginate(80)
         ]);
     }
 
@@ -56,7 +56,9 @@ class ProductController extends Controller
     // Delete product
     public function destroy(Product $product){
         
-        $product->delete();
+        $product->deleted = 1;
+
+        $product->save();
 
         return redirect('/products')->with('message', 'Bidhaa imefutwa');
 

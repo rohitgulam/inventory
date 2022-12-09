@@ -31,7 +31,7 @@ Route::get('/products', [ProductController::class, 'index'])->middleware('auth')
 
 Route::post('/products', [ProductController::class, 'store'])->middleware('auth');
 
-Route::delete('products/{product}', [ProductController::class, 'destroy'])->middleware('auth');
+Route::put('products/{product}/delete', [ProductController::class, 'destroy'])->middleware('auth');
 
 Route::get('products/{product}/edit', [ProductController::class, 'edit'])->middleware('auth');
 
@@ -124,3 +124,5 @@ Route::get('/transport', [TransportController::class, 'index'])->middleware('aut
 Route::get('/transport/create', [TransportController::class, 'create'])->middleware('auth');
 // Store 
 Route::POST('/transport/make', [TransportController::class, 'store'])->middleware('auth');
+
+Route::get('/print', [SellController::class, 'print']);
