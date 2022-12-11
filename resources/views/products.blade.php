@@ -20,7 +20,6 @@
                 </thead>
                 <tbody class="text-gray-500">
                     @foreach ($products as $product)
-                        @unless ($product->deleted == 1)
                             <tr>
                                 <td class="pr-12 pl-4 border border-gray-400 py-2 text-center" > {{$loop->iteration}}</td>
                                 <td class="pr-12 pl-4 border border-gray-400 py-2" > {{$product->name}}</td>
@@ -75,7 +74,6 @@
                                     </div>
                                 </td>
                             </tr>
-                        @endunless
                     @endforeach
                 </tbody>
             </table>

@@ -64,13 +64,8 @@
                     type="text"
                     class="border border-gray-600 rounded p-2 w-full"
                     name="category"
-                    list="categories"
                     value="{{old('category')}}"
                 />
-                <datalist>
-                    <option value="misumari"> Misumari</option>
-                    <option value="nyundo"> Nyundo</option>
-                </datalist>
                 @error('name')
                     <p class="text-red-500 text xs mt-1">{{$message}}</p>
                 @enderror
