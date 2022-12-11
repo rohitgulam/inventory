@@ -12,8 +12,34 @@
             
             <x-a-button  
                 class="bg-indigo-600 hover:bg-indigo-700"
-                name="Fanya Manunuzi"
+                name="{{__('Make a Purchase')}}"
             />
+        </div>
+        <div class="self-start p-2 ml-4">
+            <form action="/purchases" method="get">
+                <div class="mb-6">
+                    <label
+                        for="time-filter"
+                        class="inline-block text-lg mb-2"
+                    >
+                        Time
+                    </label>
+    
+                    <div class="flex items-cemter justify-center">
+                        <select name="time-filter" id="time-filter" class="border border-gray-600 rounded p-2 px-8 w-full">
+                            <option value="today">{{__('Today')}}</option>
+                            <option value="yesterday">{{__('Yesterday')}}</option>
+                            <option value="week">{{__('Week')}}</option>
+                            <option value="month">{{__('Month')}}</option>
+                            <option value="year">{{__('Year')}}</option>
+                        </select>
+                        @error('time-filter')
+                            <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                        @enderror
+                        <button class="mx-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-8" >Get</button>
+                    </div>
+                </div>
+            </form>
         </div>
         <table id="datatable" class="table-auto text-left border border-collapse border-gray-400">
             <thead>

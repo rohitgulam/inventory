@@ -5,15 +5,31 @@ namespace App\Http\Controllers;
 use App\Models\Sell;
 use App\Models\Account;
 use App\Models\Product;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use SebastianBergmann\Type\NullType;
 
 class SellController extends Controller
 {
     // show 
-    public function index(){
+    public function index(Request $request){
+        $query = Carbon::now();
+
+        if($request->all()){
+            $time = $request->all()['time-filter'];
+
+            if($time == 'yesterday'){
+                $query = Carbon::now()->subDay();
+            } elseif ($time == 'week') {
+                $query = Carbon::now()->subWeek();
+            } elseif($time == 'month'){
+                $query = Carbon::now()->subMonth();
+            }elseif($time == 'year'){
+                $query = Carbon::now()->subYear();
+            }
+        }
         return view('sells', [
-            'sells' => Sell::latest()->paginate(20)
+            'sells' => Sell::whereDate('created_at', '>=', $query)->get()
         ]);
     }
 
@@ -75,5 +91,11 @@ class SellController extends Controller
         }
 
         return redirect('/sells')->with('message', 'Mauzo yamefanyika kikamilifu');
+    }
+
+    public function print(){
+        return view ('print', [
+            'sells' => Sell::latest()->paginate(20)
+        ]);
     }
 }

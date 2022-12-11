@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Models\Account;
 use App\Models\Product;
 use App\Models\Purchase;
@@ -10,9 +11,24 @@ use Illuminate\Http\Request;
 class PurchaseController extends Controller
 {
     // show all purchases
-    public function index (){
+    public function index (Request $request){
+        $query = Carbon::now();
+
+        if($request->all()){
+            $time = $request->all()['time-filter'];
+
+            if($time == 'yesterday'){
+                $query = Carbon::now()->subDay();
+            } elseif ($time == 'week') {
+                $query = Carbon::now()->subWeek();
+            } elseif($time == 'month'){
+                $query = Carbon::now()->subMonth();
+            }elseif($time == 'year'){
+                $query = Carbon::now()->subYear();
+            }
+        }
         return view('purchases', [
-            'purchases' => Purchase::latest()->paginate(20)
+            'purchases' => Purchase::whereDate('created_at', '>=', $query)->get()
         ]);
     }
 

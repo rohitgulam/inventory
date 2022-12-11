@@ -8,9 +8,38 @@
 <div class="pt-12">
     <div class="w-12/12 flex flex-col items-center justify-center">
         <div class="flex justify-between w-full my-6">
-            <h2 class="text-3xl" >{{__('purchase list')}}</h2>
+            <h2 class="text-3xl" >{{__('Sells List')}}</h2>
             
-            <a href="sell/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > Fanya Mauzo </a>
+            <div>
+                <a href="sell/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > {{__('Make a Sell')}} </a>
+                <a href="/print" class="bg-green-600 ml-2 hover:bg-green-700 text-white rounded py-3 px-4" > {{__('Print')}} </a>
+            </div>
+        </div>
+        <div class="self-start p-2 ml-4">
+            <form action="/sells" method="get">
+                <div class="mb-6">
+                    <label
+                        for="time-filter"
+                        class="inline-block text-lg mb-2"
+                    >
+                        Time
+                    </label>
+    
+                    <div class="flex items-cemter justify-center">
+                        <select name="time-filter" id="time-filter" class="border border-gray-600 rounded p-2 px-8 w-full">
+                            <option value="today">{{__('Today')}}</option>
+                            <option value="yesterday">{{__('Yesterday')}}</option>
+                            <option value="week">{{__('Week')}}</option>
+                            <option value="month">{{__('Month')}}</option>
+                            <option value="year">{{__('Year')}}</option>
+                        </select>
+                        @error('time-filter')
+                            <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                        @enderror
+                        <button class="mx-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-8" >Get</button>
+                    </div>
+                </div>
+            </form>
         </div>
         <table id="print-table" class="display">
             <thead>
@@ -24,7 +53,7 @@
                     <th class="px-6 border border-gray-400 py-2 text-center" >{{__('sold on credit')}}</th>
                     <th class="px-6 border border-gray-400 py-2 text-center" >{{__('sold to')}}</th>
                     <th class="px-6 border border-gray-400 py-2 text-center" >{{__('seller')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('purchase day')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Sell day')}}</th>
                 </tr>
             </thead>
             <tbody class="text-gray-500">
