@@ -15,3 +15,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.dt-buttons{
+    display: none;
+}
