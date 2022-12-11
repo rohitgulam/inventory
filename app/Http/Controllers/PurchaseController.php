@@ -73,15 +73,4 @@ class PurchaseController extends Controller
 
         return redirect('/purchases')->with('message', 'Manunuzi yamefanyika kikamilifu');
     }
-
-    // Search Product
-    public function searchProduct(Request $request){
-        $query = $request->get('searchQuery');
-        
-        $products = Product::where('name', 'like', '%' . $query . '%')->get();
-
-        return json_encode( $products );
-    }
-
-
 }

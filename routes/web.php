@@ -52,7 +52,7 @@ Route::post('/purchases', [PurchaseController::class, 'store'])->middleware('aut
 
 
 // Search product 
-Route::post('/searchproduct', [PurchaseController::class, 'searchProduct'])->middleware('auth');
+Route::post('/searchproduct', [ProductController::class, 'searchProduct'])->middleware('auth');
 
 
 // Purchase Order Routes

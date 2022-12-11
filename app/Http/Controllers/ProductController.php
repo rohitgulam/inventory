@@ -10,8 +10,17 @@ class ProductController extends Controller
     // show all products
     public function index(){
         return view('products', [
-            'products' => Product::latest()->paginate(80)
+            'products' => Product::where('deleted', '=', 0)->get()
         ]);
+    }
+
+    // Search Product
+    public function searchProduct(Request $request){
+        $query = $request->get('searchQuery');
+        
+        $products = Product::where('name', 'like', '%' . $query . '%')->where('deleted', '=', 0)->get();
+
+        return json_encode( $products );
     }
 
     // Add Product
