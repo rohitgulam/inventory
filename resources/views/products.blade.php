@@ -46,7 +46,7 @@
                                             @csrf
                                             <x-button 
                                                 class="bg-blue-600 hover:bg-blue-700 mx-2"
-                                                name="Hariri"
+                                                name="{{__('Edit')}}"
                                             />
                                         </form>
                                         <form action="/products/{{$product->id}}/delete" method="post">
@@ -54,12 +54,12 @@
                                             @method('PUT')
                                             <x-button 
                                                 class="bg-red-500 hover:bg-red-600 mx-2" 
-                                                name="Futa"
+                                                name="{{__('Delete')}}"
                                             />
                                             
                                         </form>
 
-                                        @unless ($product->bonus !== 1)
+                                        {{-- @unless ($product->bonus !== 1)
                                         <form action="/products/bonus/{{$product->id}}/edit" method="post">
                                             @csrf
                                             @method('PUT')
@@ -69,7 +69,7 @@
                                             />
                                             
                                         </form>
-                                        @endunless
+                                        @endunless --}}
 
                                     </div>
                                 </td>
