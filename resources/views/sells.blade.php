@@ -24,14 +24,18 @@
                     >
                         Time
                     </label>
+
+                    @php
+                        echo request()->get('time-filter');
+                    @endphp
     
                     <div class="flex items-cemter justify-center">
                         <select name="time-filter" id="time-filter" class="border border-gray-600 rounded p-2 px-8 w-full">
                             <option value="today">{{__('Today')}}</option>
-                            <option value="yesterday">{{__('Yesterday')}}</option>
-                            <option value="week">{{__('Week')}}</option>
-                            <option value="month">{{__('Month')}}</option>
-                            <option value="year">{{__('Year')}}</option>
+                            <option value="yesterday" @if (request()->get('time-filter') == 'yesterday') selected @endif >{{__('Yesterday')}}</option>
+                            <option value="week" @if (request()->get('time-filter') == 'week') selected @endif >{{__('Week')}}</option>
+                            <option value="month" @if (request()->get('time-filter') == 'month') selected @endif >{{__('Month')}}</option>
+                            <option value="year" @if (request()->get('time-filter') == 'year') selected @endif>{{__('Year')}}</option>
                         </select>
                         @error('time-filter')
                             <p class="text-red-500 text xs mt-1">{{$message}}</p>
