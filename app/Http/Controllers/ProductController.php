@@ -54,6 +54,7 @@ class ProductController extends Controller
             'name' => 'required',
             'description' => 'sometimes',
             'quantity' => 'integer|sometimes', 
+            'selling_price' => 'integer|sometimes', 
             'category' => 'sometimes',
         ]);
 

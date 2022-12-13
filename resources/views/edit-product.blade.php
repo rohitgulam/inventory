@@ -46,6 +46,23 @@
         </div>
 
         <div class="mb-6">
+        <label
+            for="selling_price"
+            class="inline-block text-lg mb-2"
+            >{{__('Selling Price')}}</label
+        >
+        <input
+            type="number"
+            class="border border-gray-600 rounded p-2 w-full"
+            name="selling_price"
+            value="{{$product->selling_price}}"
+        />
+        @error('selling_price')
+            <p class="text-red-500 text xs mt-1">{{$message}}</p>
+        @enderror
+        </div>
+
+        <div class="mb-6">
             <label
                 for="category"
                 class="inline-block text-lg mb-2"
@@ -87,7 +104,7 @@
             @enderror
 
             <button class="bg-indigo-600 text-white rounded py-2 px-4 hover:bg-indigo-700">
-                Badilisha
+                {{__('Change')}}
             </button>
         </div>
     </form>
