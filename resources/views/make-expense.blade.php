@@ -3,14 +3,14 @@
 @section('content')
 
 <div class="p-10 max-w-5xl mx-auto mt-16 bg-white rounded drop-shadow-2xl" >
-    <h2 class="text-xl pb-2 font-bold" >{{__('purchase')}}</h2>
+    <h2 class="text-xl pb-2 font-bold" >{{__('Expenses')}}</h2>
     <form action="/expenditure" method="post">
         @csrf
         <div class="">
             <label
                 for="name"
                 class="inline-block text-lg mb-2"
-                >{{__('Find purchases')}}</label
+                >{{__('Find Expenses')}}</label
             >
             <input
                 type="text"
@@ -60,7 +60,7 @@
                         </td>
                         <td>
                             <button id="confirm_order" class="rounded py-2 px-4 bg-gray-300 text-black">
-                                Ongeza
+                                {{__('Add')}}
                             </button>
                         </td>
                     </tr>
@@ -68,13 +68,13 @@
         </table>
 
         <div class="mt-40">
-            <h2 class="text-2xl">{{__('Product order')}}</h2>
+            <h2 class="text-2xl">{{__('Expenses List')}}</h2>
             <table id="edit_table" class="table-auto text-left ">
                 <thead>
                     <tr>
                         
-                        <th class="pr-12 pl-4 py-2" >{{__('purchase name')}}</th>
-                        <th class="pr-12 pl-4 py-2">{{__('price')}}</th>
+                        <th class="pr-12 pl-4 py-2" >{{__('Expense Name')}}</th>
+                        <th class="pr-12 pl-4 py-2">{{__('Cost')}}</th>
                     </tr>
                 </thead>
                 <tbody id="orderedItems" class="text-gray-500">
@@ -82,7 +82,7 @@
                 </tbody>
             </table>
             <div class="flex justify-between w-4/5 px-5 border border-0 border-t-4 my-4" >
-                <span class="text-2xl font-bold" >{{__('total purchase')}}</span>
+                <span class="text-2xl font-bold" >{{__('Total Expense')}}</span>
                 <span class="text-2xl font-bold" id="orderSum">0</span>
             </div>
         </div>
@@ -102,7 +102,7 @@
                         <label
                             for="expenditure_by"
                             class="inline-block text-lg mb-2"
-                            >Anaefanya Matumizi</label
+                            >{{__("Expense done by")}}</label
                         >
                         <input
                             type="text"
@@ -139,14 +139,12 @@
                     <label
                         for="description"
                         class="inline-block text-lg mb-2"
-                        >{{__('purchase description')}}</label
+                        >{{__('Description')}}</label
                     >
                     <textarea
                             class="border border-gray-600 rounded p-1 w-full"
                             name="description"
                             rows="3"
-                            placeholder="Maelezo kidogo kuhusu matumizi"
-                            
                     ></textarea>
                 </div>
                 {{-- <div class="mb-6 mx-2">
@@ -165,10 +163,10 @@
                 </div> --}}
 
                 <button type="submit" class="my-2 text-white rounded py-2 px-4 bg-indigo-600 hover:bg-indigo-700">
-                    Fanya Matumizi
+                    {{__("Make Expense")}}
                 </button>
                 <button id="clearAllOrders" type="reset" class="my-2 mx-4 text-white rounded py-2 px-4 bg-red-600 hover:bg-red-700">
-                    Futa yote
+                    {{__("Clear ")}}
                 </button>
             </form>
         </div>
@@ -273,7 +271,7 @@
 
                 order_sum = order_sum + expense_inputJS;
                 }else{
-                    alert('Hili tumizi ushaliweka tayari. Kama unataka kuongeza, futa kwanza iliyopo'{{__('This purchase is already selected. If you want to add, first delete the existing one')}})
+                    alert('This expense is already selected. If you want to add, first delete the existing one')
                 }
 
 

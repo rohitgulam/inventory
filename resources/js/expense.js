@@ -1,12 +1,10 @@
 import './bootstrap';
 
-console.log('write');
-
 // Search Expense 
 const searchExpenseInput = document.getElementById('search-expense');
 const searchExpenseResults = document.getElementById('searchExpenseResults');
 
-console.log(searchExpenseInput);
+// console.log(searchExpenseInput);
 
 
 searchExpenseInput.addEventListener('keyup', (e) => {
