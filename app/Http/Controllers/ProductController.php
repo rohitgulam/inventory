@@ -33,6 +33,7 @@ class ProductController extends Controller
             'quality' => 'string',
             'metric' => 'string',
             'selling_price' => 'integer',
+            'buying_price' => 'integer|sometimes ',
             'bonus' => 'integer',
             'quantity' => 'sometimes|integer',
         ]);

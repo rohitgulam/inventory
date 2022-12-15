@@ -3,7 +3,7 @@
     class="fixed left-0 top-0 p-10 w-full h-[100vh] mx-auto bg-opacity rounded drop-shadow-2xl hidden z-10" >
 
     <div
-        class="absolute left-[40%] p-10 max-w-lg mx-auto mt-10 bg-white rounded drop-shadow-2xl" 
+        class="absolute left-[40%] p-10 max-w-lg mx-auto mt-5 bg-white rounded drop-shadow-2xl" 
     >
 
     <button id="close-product-button" class="absolute top-2 right-2 text-red-800">
@@ -71,23 +71,39 @@
                 @enderror
             </div>
 
-           
-
-            <div class="mb-6">
-                <label
-                    for="selling_price"
-                    class="inline-block text-lg mb-2"
-                    >Bei ya kuuza </label
-                >
-                <input
-                    type="text"
-                    class="border border-gray-600 rounded p-2 w-full"
-                    name="selling_price"
-                    value="{{old('selling_price')}}"
-                />
-                @error('selling_price')
-                    <p class="text-red-500 text xs mt-1">{{$message}}</p>
-                @enderror
+            <div class="flex">
+                <div class="mb-6 mr-1">
+                    <label
+                        for="selling_price"
+                        class="inline-block text-lg mb-2"
+                        >{{__('Selling Price')}}</label
+                    >
+                    <input
+                        type="text"
+                        class="border border-gray-600 rounded p-2 w-full"
+                        name="selling_price"
+                        value="{{old('selling_price')}}"
+                    />
+                    @error('selling_price')
+                        <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                    @enderror
+                </div>
+                <div class="mb-6 ml-1">
+                    <label
+                        for="buying_price"
+                        class="inline-block text-lg mb-2"
+                        >Buying Price </label
+                    >
+                    <input
+                        type="text"
+                        class="border border-gray-600 rounded p-2 w-full"
+                        name="buying_price"
+                        value="{{old('buying_price')}}"
+                    />
+                    @error('buying_price')
+                        <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                    @enderror
+                </div>
             </div>
 
             <div class="mb-6">
@@ -164,7 +180,7 @@
 
                 <x-button 
                     class="bg-indigo-600 hover:bg-indigo-700"
-                    name="Ongeza" 
+                    name="{{__('Add')}}" 
                 />
                 
             </div>

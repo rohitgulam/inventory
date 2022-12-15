@@ -9,12 +9,13 @@
                 <thead>
                     <tr>
                         <th class="pr-12 pl-4 border border-gray-400 py-2 text-center" >#</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2" >{{__('product name')}}</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2">{{__('quality')}}</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2">{{__('category')}}</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2">{{__('selling price')}}</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2">{{__('available stock')}}</th>
-                        <th class="pr-12 pl-4 border border-gray-400 py-2" >{{__('description')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2" >{{__('Product Name')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2">{{__('Quality')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2">{{__('Category')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2">{{__('Selling Price')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2">{{__('Buying Price')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2">{{__('Available Stock')}}</th>
+                        <th class="pr-12 pl-4 border border-gray-400 py-2" >{{__('Description')}}</th>
                         <th class="pr-12 pl-4 border border-gray-400 py-2 text-center" >{{__('action')}}</th>
                     </tr>
                 </thead>
@@ -32,6 +33,7 @@
                                     @endif 
                                 </td>
                                 <td class="pr-12 pl-4 border border-gray-400 py-2 text-center"> @money($product->selling_price) </td>
+                                <td class="pr-12 pl-4 border border-gray-400 py-2 text-center"> @money($product->buying_price) </td>
                                 <td class="pr-12 pl-4 border border-gray-400 py-2 text-center"> {{$product->quantity}} </td>
                                 <td class="pr-12 pl-4 border border-gray-400 py-2" > 
                                     @if ($product->description == null)
