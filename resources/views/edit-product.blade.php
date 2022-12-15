@@ -63,6 +63,23 @@
         </div>
 
         <div class="mb-6">
+        <label
+            for="buying_price"
+            class="inline-block text-lg mb-2"
+            >{{__('Buying Price')}}</label
+        >
+        <input
+            type="number"
+            class="border border-gray-600 rounded p-2 w-full"
+            name="buying_price"
+            value="{{$product->buying_price}}"
+        />
+        @error('buying_price')
+            <p class="text-red-500 text xs mt-1">{{$message}}</p>
+        @enderror
+        </div>
+
+        <div class="mb-6">
             <label
                 for="category"
                 class="inline-block text-lg mb-2"
