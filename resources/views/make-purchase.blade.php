@@ -178,7 +178,7 @@
                 </button>
             </form>
         </div>
-        @vite('resources/js/product.js')
+        @vite('resources/js/purchaseProduct.js')
 
     
         <script>
