@@ -4,17 +4,17 @@
 <div class="pt-12">
     <div class="w-12/12 flex flex-col ">
         <div class="flex justify-between w-full my-6">
-            <h2 class="text-3xl" >{{__('daily accounts')}}</h2>
+            <h2 class="text-3xl" >{{__('Daily Accounts')}}</h2>
         </div>
-        <table class="table-auto text-left border border-collapse border-gray-400">
+        <table id="datatable" class="table-auto text-left border border-collapse border-gray-400">
             <thead>
                 <tr>
                     <th class="px-6 border border-gray-400 py-2 text-center" >#</th>
-                    <th class="px-6 border border-gray-400 py-2" >{{__('day')}}</th>
-                    <th class="px-6 border border-gray-400 py-2">{{__('income')}}</th>
-                    <th class="px-6 border border-gray-400 py-2" >{{__('enpenditures')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('profit')}}</th> 
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('loss')}}</th> 
+                    <th class="px-6 border border-gray-400 py-2" >{{__('Day')}}</th>
+                    <th class="px-6 border border-gray-400 py-2">{{__('Income')}}</th>
+                    <th class="px-6 border border-gray-400 py-2" >{{__('Expenses')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Profit')}}</th> 
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Loss')}}</th> 
                     {{-- <th class="px-6 border border-gray-400 py-2">{{__('user')}}</th>
                     <th class="px-6 border border-gray-400 py-2 text-center" >{{__('day')}}</th>
                     <th class="px-6 border border-gray-400 py-2 text-center" ></th>
@@ -75,4 +75,5 @@
         </table>
     </div>
 </div>
+@vite('resources/js/table.js')
 @endsection
