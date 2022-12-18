@@ -125,4 +125,9 @@ Route::get('/transport/create', [TransportController::class, 'create'])->middlew
 // Store 
 Route::POST('/transport/make', [TransportController::class, 'store'])->middleware('auth');
 
+// Print ROutes
 Route::get('/print', [SellController::class, 'print']);
+Route::get('/print-products', [ProductController::class, 'print']);
+Route::get('/print-purchases', [PurchaseController::class, 'print']);
+Route::get('/print-expenses', [ExpenditureController::class, 'print']);
+Route::get('/print-transport', [TransportController::class, 'print']);

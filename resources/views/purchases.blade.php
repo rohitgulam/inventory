@@ -8,12 +8,15 @@
 <div class="pt-12">
     <div class="w-12/12 flex flex-col items-center justify-center">
         <div class="flex justify-between w-full my-6">
-            <h2 class="text-3xl" >{{__('purchase list')}}</h2>
+            <h2 class="text-3xl" >{{__('Purchases')}}</h2>
             
-            <x-a-button  
+            <div>
+                <x-a-button  
                 class="bg-indigo-600 hover:bg-indigo-700"
                 name="{{__('Make a Purchase')}}"
-            />
+                />
+                <a href="/print-purchases?time-filter={{request()->get('time-filter')}}" class="bg-green-600 ml-2 hover:bg-green-700 text-white rounded py-3 px-4" > {{__('Print')}} </a>
+            </div>
         </div>
         <div class="self-start p-2 ml-4">
             <form action="/purchases" method="get">
@@ -45,15 +48,15 @@
             <thead>
                 <tr>
                     <th class="px-6 border border-gray-400 py-2 text-center" >#</th>
-                    <th class="px-6 border border-gray-400 py-2" >{{__('product name')}}</th>
-                    <th class="px-6 border border-gray-400 py-2">{{__('purchased quantity')}}</th>
-                    <th class="px-6 border border-gray-400 py-2" >{{__('price for each')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('wholesale price')}}</th>
-                    <th class="px-6 border border-gray-400 py-2">{{__('description')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('bought on credit')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('bought from')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('buyer')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('purchase day')}}</th>
+                    <th class="px-6 border border-gray-400 py-2" >{{__('Product Name')}}</th>
+                    <th class="px-6 border border-gray-400 py-2">{{__('Purchased Quantity')}}</th>
+                    <th class="px-6 border border-gray-400 py-2" >{{__('Price For Each')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Total Price')}}</th>
+                    <th class="px-6 border border-gray-400 py-2">{{__('Description')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Credit?')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Bought From')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Bought By')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Purchase Day')}}</th>
                 </tr>
             </thead>
             <tbody class="text-gray-500">

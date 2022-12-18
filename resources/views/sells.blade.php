@@ -12,7 +12,7 @@
             
             <div>
                 <a href="sell/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > {{__('Make a Sell')}} </a>
-                <a href="/print" class="bg-green-600 ml-2 hover:bg-green-700 text-white rounded py-3 px-4" > {{__('Print')}} </a>
+                <a href="/print?time-filter={{request()->get('time-filter')}}" class="bg-green-600 ml-2 hover:bg-green-700 text-white rounded py-3 px-4" > {{__('Print')}} </a>
             </div>
         </div>
         <div class="self-start p-2 ml-4">

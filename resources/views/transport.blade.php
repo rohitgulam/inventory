@@ -6,7 +6,40 @@
         <div class="flex justify-between w-full my-6">
             <h2 class="text-3xl" >{{__('Transport list')}}</h2>
             
-            <a href="transport/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > {{__('Create Transport')}}</a>
+            <div>
+                <a href="transport/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > {{__('Create Transport')}}</a>
+                <a href="/print-transport?time-filter={{request()->get('time-filter')}}" class="bg-green-600 ml-2 hover:bg-green-700 text-white rounded py-3 px-4" > {{__('Print')}} </a>
+            </div>
+        </div>
+        <div class="self-start p-2 ml-4">
+            <form action="/transport" method="get">
+                <div class="mb-6">
+                    <label
+                        for="time-filter"
+                        class="inline-block text-lg mb-2"
+                    >
+                        Time
+                    </label>
+
+                    @php
+                        echo request()->get('time-filter');
+                    @endphp
+    
+                    <div class="flex items-cemter justify-center">
+                        <select name="time-filter" id="time-filter" class="border border-gray-600 rounded p-2 px-8 w-full">
+                            <option value="today">{{__('Today')}}</option>
+                            <option value="yesterday" @if (request()->get('time-filter') == 'yesterday') selected @endif >{{__('Yesterday')}}</option>
+                            <option value="week" @if (request()->get('time-filter') == 'week') selected @endif >{{__('Week')}}</option>
+                            <option value="month" @if (request()->get('time-filter') == 'month') selected @endif >{{__('Month')}}</option>
+                            <option value="year" @if (request()->get('time-filter') == 'year') selected @endif>{{__('Year')}}</option>
+                        </select>
+                        @error('time-filter')
+                            <p class="text-red-500 text xs mt-1">{{$message}}</p>
+                        @enderror
+                        <button class="mx-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-8" >Get</button>
+                    </div>
+                </div>
+            </form>
         </div>
         <table id="datatable" class="table-auto text-left border border-collapse border-gray-400">
             <thead>

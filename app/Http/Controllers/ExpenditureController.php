@@ -68,4 +68,26 @@ class ExpenditureController extends Controller
 
     }
 
+    public function print(Request $request){
+        $query = Carbon::now();
+
+        if($request->all()){
+            $time = $request->all()['time-filter'];
+
+            if($time == 'yesterday'){
+                $query = Carbon::now()->subDay();
+            } elseif ($time == 'week') {
+                $query = Carbon::now()->subWeek();
+            } elseif($time == 'month'){
+                $query = Carbon::now()->subMonth();
+            }elseif($time == 'year'){
+                $query = Carbon::now()->subYear();
+            }
+        }
+        return view('print.print-expenses', [
+            'expenses' => Expenditure::whereDate('created_at', '>=', $query)->get()
+        ]);
+        
+    }
+
 }

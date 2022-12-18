@@ -6,7 +6,10 @@
         <div class="flex justify-between w-full my-6">
             <h2 class="text-3xl" >{{__('Ependiture list')}}</h2>
             
-            <a href="expense/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > Fanya Matumizi </a>
+            <div>
+                <a href="expense/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > Fanya Matumizi </a>
+                <a href="/print-expenses?time-filter={{request()->get('time-filter')}}" class="bg-green-600 ml-2 hover:bg-green-700 text-white rounded py-3 px-4" > {{__('Print')}} </a>
+            </div>
         </div>
         <div class="self-start p-2 ml-4">
             <form action="/expenses" method="get">

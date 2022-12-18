@@ -4,7 +4,10 @@
 
     <div class="pt-24">
         <div class="w-11/12 flex flex-col items-center justify-center">
+            <div class=" w-11/12 flex items-center justify-between">
             <h2 class="text-3xl py-6" >{{__('product list')}}</h2>
+                <a href="/print-products" class="bg-green-600 ml-2 hover:bg-green-700 text-white rounded py-3 px-4" > {{__('Print')}} </a>
+            </div>
             <table id="datatable" class="table-auto text-left border border-collapse border-gray-400">
                 <thead>
                     <tr>

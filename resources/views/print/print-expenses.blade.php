@@ -17,35 +17,27 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>Product Name</th>
-                <th>Product Quality</th>
-                <th>Price per unit</th>
-                <th>Total Price</th>
-                <th>Sold by</th>
-                <th>Date</th>
+                <th>{{__('Expense name')}}</th>
+                <th>{{__('Amount')}}</th>
+                <th>{{__('Date')}}</th> 
             </tr>
         </thead>
         <tbody>
-            @foreach ($sells as $sell) 
+            @foreach ($expenses as $expense) 
             <tr>
-                <td>{{$num++}}</td>
-                <td>{{$sell->product}}</td>
-                <td>{{$sell->quantity}}</td>
-                <td>@money($sell->price)</td>
-                <td>@money($sell->unit_sum) </td>
-                <td>{{$sell->sell_by}}</td>
-                <td>{{$sell->created_at}}</td>
+                <td> {{$loop->iteration}}</td>
+                <td> {{$expense->name}}</td>
+                <td> @money($expense->amount) </td>
+                <td> {{$expense->created_at}} </td> 
             </tr>
             @endforeach
         </tbody>
         <tfoot>
             <tr>
                 <th>#</th>
-                <th>Product Name</th>
-                <th>Purchased Quantity</th>
-                <th>Price per unit</th>
-                <th>Total Price</th>
-                <th>Salary</th>
+                <th>{{__('Expense name')}}</th>
+                <th>{{__('Amount')}}</th>
+                <th>{{__('Date')}}</th> 
             </tr>
         </tfoot>
 

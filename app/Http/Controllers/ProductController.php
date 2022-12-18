@@ -97,5 +97,11 @@ class ProductController extends Controller
     //     return redirect('/products')->with('message', 'Bonus imeongezwa');
     // }
 
+    public function print(Request $request){
+        return view ('print.print-product', [
+            'products' => Product::where('deleted', '=', 0)->get()
+        ]);
+    }
+
 
 }
