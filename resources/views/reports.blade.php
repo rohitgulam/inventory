@@ -27,7 +27,10 @@
                 @foreach ($accounts as $account)
                     <tr>
                         <td class="pr-12 pl-4 border border-gray-400 py-2 text-center" > {{$loop->iteration}}</td>
-                        <td class="pr-12 pl-4 border border-gray-400 py-2" > {{$account->created_at}}</td>
+                        <td class="pr-12 pl-4 border border-gray-400 py-2 underline" > 
+                            <a href="/income?day={{$account->created_at}}">
+                                {{$account->created_at}}
+                            </a></td>
                         <td class="pr-12 pl-4 border border-gray-400 py-2"> @money($account->revenue) </td>
                         <td class="pr-12 pl-4 border border-gray-400 py-2 text-red-500"> @money($account->expenses) </td>
                         <td class="pr-12 pl-4 border border-gray-400 py-2 text-green-500"> @money($account->profit) </td>
