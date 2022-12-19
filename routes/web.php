@@ -2,14 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SellController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\CreditController;
+use App\Http\Controllers\DailyAccountController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PurchaseController;
-use App\Http\Controllers\ExpenditureController;
 use App\Http\Controllers\TransportController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\ExpenditureController;
 
 /*
 |--------------------------------------------------------------------------
@@ -131,3 +132,6 @@ Route::get('/print-products', [ProductController::class, 'print']);
 Route::get('/print-purchases', [PurchaseController::class, 'print']);
 Route::get('/print-expenses', [ExpenditureController::class, 'print']);
 Route::get('/print-transport', [TransportController::class, 'print']);
+
+// Income 
+Route::get('/income', [DailyAccountController::class, 'index']);
