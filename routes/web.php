@@ -72,6 +72,15 @@ Route::get('/sell/create', [SellController::class, 'create'])->middleware('auth'
 // sell order
 Route::post('sell/order/create', [SellController::class, 'store'])->middleware('auth');
 
+// Show edit sell 
+Route::get('sells/{sell}/edit', [SellController::class, 'edit'])->middleware('auth');
+
+// Update sell
+Route::put('sell/{sell}', [SellController::class, 'update'])->middleware('auth');
+
+// Delete sell 
+Route::delete('sells/{sell}/delete', [SellController::class, 'destroy'])->middleware('auth');
+
 // Credit Routes
 Route::get('/credits', [CreditController::class, 'index'])->middleware('auth');
 
@@ -81,8 +90,7 @@ Route::get('credits/{sell}/edit', [CreditController::class, 'edit'])->middleware
 // Pay credit
 Route::put('credits/{sell}', [CreditController::class, 'update'])->middleware('auth');
 
-// Edit sell 
-Route::put('sell/{sell}/edit', );
+
 
 // Expenses Routes
 // Index

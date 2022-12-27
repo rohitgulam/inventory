@@ -49,15 +49,16 @@
             <thead>
                 <tr>
                     <th class="px-6 border border-gray-400 py-2 text-center" >#</th>
-                    <th class="px-6 border border-gray-400 py-2" >{{__('product name')}}</th>
-                    <th class="px-6 border border-gray-400 py-2">{{__('quantity sold')}}</th>
-                    <th class="px-6 border border-gray-400 py-2" >{{__('each price')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('wholesale price')}}</th>
-                    <th class="px-6 border border-gray-400 py-2">{{__('description')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('sold on credit')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('sold to')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('seller')}}</th>
-                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Sell day')}}</th>
+                    <th class="px-6 border border-gray-400 py-2" >{{__('Product Name')}}</th>
+                    <th class="px-6 border border-gray-400 py-2">{{__('Quantity sold')}}</th>
+                    <th class="px-6 border border-gray-400 py-2" >{{__('Single Price')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Total Price')}}</th>
+                    <th class="px-6 border border-gray-400 py-2">{{__('Description')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Credit')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Sold To')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Seller')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Day')}}</th>
+                    <th class="px-6 border border-gray-400 py-2 text-center" >{{__('Actions')}}</th>
                 </tr>
             </thead>
             <tbody class="text-gray-500">
@@ -85,6 +86,24 @@
                             <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$sell->sell_to}} </td>
                             <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$sell->sell_by}} </td>
                             <td class="pr-12 pl-4 border border-gray-400 py-2"> {{$sell->created_at}} </td>
+                            <td class="pr-12 pl-4 border border-gray-400 py-2">
+                                <div class="flex">
+                                    <form action="/sells/{{$sell->id}}/edit" method="get">
+                                    @csrf
+                                    @method('GET')
+                                    <button class="text-white rounded py-2 px-4 bg-blue-600 hover:bg-blue-700 mx-2" >
+                                        {{__('Edit')}}
+                                    </button>
+                                </form>
+                                <form action="/sells/{{$sell->id}}/delete" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="text-white rounded py-2 px-4 bg-red-500 hover:bg-red-600 mx-2" >
+                                        {{__('Delete')}}
+                                    </button>
+                                </form>
+                                 </div>
+                            </td>
                             
                         </tr>
                 @endforeach
