@@ -72,6 +72,18 @@ Route::get('/sell/create', [SellController::class, 'create'])->middleware('auth'
 // sell order
 Route::post('sell/order/create', [SellController::class, 'store'])->middleware('auth');
 
+// Credit Routes
+Route::get('/credits', [CreditController::class, 'index'])->middleware('auth');
+
+// Show pay credit form
+Route::get('credits/{sell}/edit', [CreditController::class, 'edit'])->middleware('auth');
+
+// Pay credit
+Route::put('credits/{sell}', [CreditController::class, 'update'])->middleware('auth');
+
+// Edit sell 
+Route::put('sell/{sell}/edit', );
+
 // Expenses Routes
 // Index
 Route::get('expenses', [ExpenditureController::class, 'index'])->middleware('auth');
@@ -90,15 +102,6 @@ Route::get('expense/create', [ExpenditureController::class, 'create'])->middlewa
 
 // Store
 Route::post('/expenditure', [ExpenditureController::class, 'store'])->middleware('auth');
-
-// Credit Routes
-Route::get('/credits', [CreditController::class, 'index'])->middleware('auth');
-
-// Show pay credit form
-Route::get('sells/{sell}/edit', [CreditController::class, 'edit'])->middleware('auth');
-
-// Pay credit
-Route::put('sells/{sell}', [CreditController::class, 'update'])->middleware('auth');
 
 // Reports
 Route::get('reports', [AccountController::class, 'index'])->middleware('auth');

@@ -5,7 +5,7 @@
 
 <div class="p-10 max-w-lg mx-auto mt-24 bg-white rounded drop-shadow-2xl" >
     <h2 class="text-xl pb-2 font-bold" >{{__('pay loan')}}</h2>
-    <form action="/sells/{{$product->id}}" method="post">
+    <form action="/credit/{{$product->id}}" method="post">
         @csrf
         @method('PUT')
         <div class="mb-6">

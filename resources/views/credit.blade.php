@@ -4,9 +4,9 @@
 <div class="pt-12">
     <div class="w-12/12 flex flex-col ">
         <div class="flex justify-between w-full my-6">
-            <h2 class="text-3xl" >{{__('List of all uses')}}</h2>
+            <h2 class="text-3xl" >{{__('List of all credits')}}</h2>
             
-            <a href="expense/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > Fanya Matumizi </a>
+            {{-- <a href="expense/create" class="bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-4" > Fanya Matumizi </a> --}}
         </div>
         <table class="table-auto text-left border border-collapse border-gray-400">
             <thead>
@@ -37,14 +37,14 @@
                         <td class="pr-12 pl-4 border border-gray-400 py-2">
                             @if ($product->credit == 0)
                                 <p class="text-lg text-green-500">
-                                    Deni Limelipwa{{__('Paid Credit')}}
+                                    {{__('Credit Paid')}}
                                 </p>
                             @else
-                            <form action="/sells/{{$product->id}}/edit" method="GET">
+                            <form action="/credit/{{$product->id}}/edit" method="GET">
                                 @csrf
                                 <x-button 
                                     class="bg-green-600 hover:bg-green-700 mx-2"
-                                    name="Lipa Deni"
+                                    name="Pay"
                                 />
                             </form> 
                             @endif
