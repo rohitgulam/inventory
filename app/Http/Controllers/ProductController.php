@@ -10,7 +10,7 @@ class ProductController extends Controller
     // show all products
     public function index(){
         return view('products', [
-            'products' => Product::where('deleted', '=', 0)->get()
+            'products' => Product::orderBy('name')->where('deleted', '=', 0)->get()
         ]);
     }
 
