@@ -13,22 +13,53 @@ class PurchaseController extends Controller
     // show all purchases
     public function index (Request $request){
         $query = Carbon::now();
+        $items = Purchase::whereDate('created_at', '>=', $query)->get();
 
         if($request->all()){
             $time = $request->all()['time-filter'];
 
             if($time == 'yesterday'){
                 $query = Carbon::now()->subDay();
+                $items = Purchase::whereDate('created_at', '=', $query)->get();
             } elseif ($time == 'week') {
                 $query = Carbon::now()->subWeek();
+                $items = Purchase::whereDate('created_at', '>=', $query)->get();
             } elseif($time == 'month'){
                 $query = Carbon::now()->subMonth();
+                $items = Purchase::whereDate('created_at', '>=', $query)->get();
             }elseif($time == 'year'){
                 $query = Carbon::now()->subYear();
+                $items = Purchase::whereDate('created_at', '>=', $query)->get();
             }
         }
         return view('purchases', [
-            'purchases' => Purchase::whereDate('created_at', '>=', $query)->get()
+            'purchases' => $items
+        ]);
+    }
+
+    public function print(Request $request){
+        $query = Carbon::now();
+        $items = Purchase::whereDate('created_at', '>=', $query)->get();
+
+        if($request->all()){
+            $time = $request->all()['time-filter'];
+
+            if($time == 'yesterday'){
+                $query = Carbon::now()->subDay();
+                $items = Purchase::whereDate('created_at', '=', $query)->get();
+            } elseif ($time == 'week') {
+                $query = Carbon::now()->subWeek();
+                $items = Purchase::whereDate('created_at', '>=', $query)->get();
+            } elseif($time == 'month'){
+                $query = Carbon::now()->subMonth();
+                $items = Purchase::whereDate('created_at', '>=', $query)->get();
+            }elseif($time == 'year'){
+                $query = Carbon::now()->subYear();
+                $items = Purchase::whereDate('created_at', '>=', $query)->get();
+            }
+        }
+        return view('print.print-purchase', [
+            'purchases' => $items
         ]);
     }
 
@@ -88,26 +119,5 @@ class PurchaseController extends Controller
         }
 
         return redirect('/purchases')->with('message', 'Manunuzi yamefanyika kikamilifu');
-    }
-
-    public function print(Request $request){
-        $query = Carbon::now();
-
-        if($request->all()){
-            $time = $request->all()['time-filter'];
-
-            if($time == 'yesterday'){
-                $query = Carbon::now()->subDay();
-            } elseif ($time == 'week') {
-                $query = Carbon::now()->subWeek();
-            } elseif($time == 'month'){
-                $query = Carbon::now()->subMonth();
-            }elseif($time == 'year'){
-                $query = Carbon::now()->subYear();
-            }
-        }
-        return view('print.print-purchase', [
-            'purchases' => Purchase::whereDate('created_at', '>=', $query)->get()
-        ]);
     }
 }

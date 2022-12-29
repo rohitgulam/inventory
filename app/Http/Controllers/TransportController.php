@@ -12,24 +12,56 @@ class TransportController extends Controller
     // index
     public function index(Request $request){
         $query = Carbon::now();
+        $items = Transport::whereDate('created_at', '>=', $query)->get();
 
         if($request->all()){
             $time = $request->all()['time-filter'];
 
             if($time == 'yesterday'){
                 $query = Carbon::now()->subDay();
+                $items = Transport::whereDate('created_at', '=', $query)->get();
             } elseif ($time == 'week') {
                 $query = Carbon::now()->subWeek();
+                $items = Transport::whereDate('created_at', '>=', $query)->get();
             } elseif($time == 'month'){
                 $query = Carbon::now()->subMonth();
+                $items = Transport::whereDate('created_at', '>=', $query)->get();
             }elseif($time == 'year'){
                 $query = Carbon::now()->subYear();
+                $items = Transport::whereDate('created_at', '>=', $query)->get();
             }
         }
         return view('transport', [
-            'transports' => Transport::whereDate('created_at', '>=', $query)->get()
+            'transports' => $items
         ]);
     }
+
+    public function print(Request $request){
+        $query = Carbon::now();
+        $items = Transport::whereDate('created_at', '>=', $query)->get();
+
+        if($request->all()){
+            $time = $request->all()['time-filter'];
+
+            if($time == 'yesterday'){
+                $query = Carbon::now()->subDay();
+                $items = Transport::whereDate('created_at', '=', $query)->get();
+            } elseif ($time == 'week') {
+                $query = Carbon::now()->subWeek();
+                $items = Transport::whereDate('created_at', '>=', $query)->get();
+            } elseif($time == 'month'){
+                $query = Carbon::now()->subMonth();
+                $items = Transport::whereDate('created_at', '>=', $query)->get();
+            }elseif($time == 'year'){
+                $query = Carbon::now()->subYear();
+                $items = Transport::whereDate('created_at', '>=', $query)->get();
+            }
+        }
+        return view('print.print-transport', [
+            'transports' => $items
+        ]);
+    }
+
     // Show form
     public function create(){
         return view('make-transport');
@@ -61,26 +93,5 @@ class TransportController extends Controller
         } 
 
         return redirect('/transport')->with('message', 'Transportation created succesfully');
-    }
-
-    public function print(Request $request){
-        $query = Carbon::now();
-
-        if($request->all()){
-            $time = $request->all()['time-filter'];
-
-            if($time == 'yesterday'){
-                $query = Carbon::now()->subDay();
-            } elseif ($time == 'week') {
-                $query = Carbon::now()->subWeek();
-            } elseif($time == 'month'){
-                $query = Carbon::now()->subMonth();
-            }elseif($time == 'year'){
-                $query = Carbon::now()->subYear();
-            }
-        }
-        return view('print.print-transport', [
-            'transports' => Transport::whereDate('created_at', '>=', $query)->get()
-        ]);
     }
 }

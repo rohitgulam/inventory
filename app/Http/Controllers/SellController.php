@@ -14,23 +14,57 @@ class SellController extends Controller
     // show 
     public function index(Request $request){
         $query = Carbon::now();
+        $items = Sell::whereDate('created_at', '>=', $query)->get();
 
         if($request->all()){
             $time = $request->all()['time-filter'];
 
             if($time == 'yesterday'){
                 $query = Carbon::now()->subDay();
+                $items = Sell::whereDate('created_at', '=', $query)->get();
             } elseif ($time == 'week') {
                 $query = Carbon::now()->subWeek();
+                $items = Sell::whereDate('created_at', '>=', $query)->get();
             } elseif($time == 'month'){
                 $query = Carbon::now()->subMonth();
+                $items = Sell::whereDate('created_at', '>=', $query)->get();
             }elseif($time == 'year'){
                 $query = Carbon::now()->subYear();
+                $items = Sell::whereDate('created_at', '>=', $query)->get();
             }
         }
         return view('sells', [
-            'sells' => Sell::whereDate('created_at', '>=', $query)->get()
+            'sells' => $items
         ]);
+    }
+
+    public function print(Request $request){
+        $query = Carbon::now();
+        $items = Sell::whereDate('created_at', '>=', $query)->get();
+
+        if($request->all()){
+            $time = $request->all()['time-filter'];
+
+            if($time == 'yesterday'){
+                $query = Carbon::now()->subDay();
+                $items = Sell::whereDate('created_at', '=', $query)->get();
+            } elseif ($time == 'week') {
+                $query = Carbon::now()->subWeek();
+                $items = Sell::whereDate('created_at', '>=', $query)->get();
+            } elseif($time == 'month'){
+                $query = Carbon::now()->subMonth();
+                $items = Sell::whereDate('created_at', '>=', $query)->get();
+            }elseif($time == 'year'){
+                $query = Carbon::now()->subYear();
+                $items = Sell::whereDate('created_at', '>=', $query)->get();
+            }
+        }
+        return view('print.print', [
+            'sells' => $items
+        ]);
+        // return view ('print.print', [
+        //     'sells' => Sell::latest()->paginate(20)
+        // ]);
     }
 
     // Show make sell form 
@@ -91,30 +125,6 @@ class SellController extends Controller
         }
 
         return redirect('/sells')->with('message', 'Mauzo yamefanyika kikamilifu');
-    }
-
-    public function print(Request $request){
-        $query = Carbon::now();
-
-        if($request->all()){
-            $time = $request->all()['time-filter'];
-
-            if($time == 'yesterday'){
-                $query = Carbon::now()->subDay();
-            } elseif ($time == 'week') {
-                $query = Carbon::now()->subWeek();
-            } elseif($time == 'month'){
-                $query = Carbon::now()->subMonth();
-            }elseif($time == 'year'){
-                $query = Carbon::now()->subYear();
-            }
-        }
-        return view('print.print', [
-            'sells' => Sell::whereDate('created_at', '>=', $query)->get()
-        ]);
-        // return view ('print.print', [
-        //     'sells' => Sell::latest()->paginate(20)
-        // ]);
     }
 
     public function edit(Sell $sell){

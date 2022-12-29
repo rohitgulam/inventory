@@ -12,23 +12,55 @@ class ExpenditureController extends Controller
     // show all
     public function index(Request $request){
         $query = Carbon::now();
+        $items = Expenditure::whereDate('created_at', '>=', $query)->get();
 
         if($request->all()){
             $time = $request->all()['time-filter'];
 
             if($time == 'yesterday'){
                 $query = Carbon::now()->subDay();
+                $items = Expenditure::whereDate('created_at', '=', $query)->get();
             } elseif ($time == 'week') {
                 $query = Carbon::now()->subWeek();
+                $items = Expenditure::whereDate('created_at', '>=', $query)->get();
             } elseif($time == 'month'){
                 $query = Carbon::now()->subMonth();
+                $items = Expenditure::whereDate('created_at', '>=', $query)->get();
             }elseif($time == 'year'){
                 $query = Carbon::now()->subYear();
+                $items = Expenditure::whereDate('created_at', '>=', $query)->get();
             }
         }
         return view('expenses', [
-            'expenditure' => Expenditure::whereDate('created_at', '>=', $query)->get()
+            'expenditure' => $items
         ]);
+    }
+
+    public function print(Request $request){
+        $query = Carbon::now();
+        $items = Expenditure::whereDate('created_at', '>=', $query)->get();
+
+        if($request->all()){
+            $time = $request->all()['time-filter'];
+
+            if($time == 'yesterday'){
+                $query = Carbon::now()->subDay();
+                $items = Expenditure::whereDate('created_at', '=', $query)->get();
+            } elseif ($time == 'week') {
+                $query = Carbon::now()->subWeek();
+                $items = Expenditure::whereDate('created_at', '>=', $query)->get();
+            } elseif($time == 'month'){
+                $query = Carbon::now()->subMonth();
+                $items = Expenditure::whereDate('created_at', '>=', $query)->get();
+            }elseif($time == 'year'){
+                $query = Carbon::now()->subYear();
+                $items = Expenditure::whereDate('created_at', '>=', $query)->get();
+            }
+        }
+        return view('print.print-expenses', [
+            'expenses' => $items
+        ]);
+        
     }
 
     // Show create expenditure form 
@@ -67,27 +99,4 @@ class ExpenditureController extends Controller
         return redirect('/expenses')->with('message', 'Matumizi yamefanyika kikamilifu');
 
     }
-
-    public function print(Request $request){
-        $query = Carbon::now();
-
-        if($request->all()){
-            $time = $request->all()['time-filter'];
-
-            if($time == 'yesterday'){
-                $query = Carbon::now()->subDay();
-            } elseif ($time == 'week') {
-                $query = Carbon::now()->subWeek();
-            } elseif($time == 'month'){
-                $query = Carbon::now()->subMonth();
-            }elseif($time == 'year'){
-                $query = Carbon::now()->subYear();
-            }
-        }
-        return view('print.print-expenses', [
-            'expenses' => Expenditure::whereDate('created_at', '>=', $query)->get()
-        ]);
-        
-    }
-
 }
