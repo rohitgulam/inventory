@@ -51,6 +51,15 @@ Route::get('/purchase/create', [PurchaseController::class, 'create'])->middlewar
 
 Route::post('/purchases', [PurchaseController::class, 'store'])->middleware('auth');
 
+// Show edit Purchase 
+Route::get('purchases/{purchase}/edit', [PurchaseController::class, 'edit'])->middleware('auth');
+
+// Update Purchase
+Route::put('purchases/{purchase}', [PurchaseController::class, 'update'])->middleware('auth');
+
+// Delete sell 
+Route::delete('purchases/{purchase}/delete', [PurchaseController::class, 'destroy'])->middleware('auth');
+
 
 // Search product 
 Route::post('/searchproduct', [ProductController::class, 'searchProduct'])->middleware('auth');
