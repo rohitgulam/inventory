@@ -15,14 +15,14 @@
                 <a href="/print?time-filter={{request()->get('time-filter')}}" class="bg-green-600 ml-2 hover:bg-green-700 text-white rounded py-3 px-4" > {{__('Print')}} </a>
             </div>
         </div>
-        <div class="self-start p-2 ml-4">
+        <div class="self-start p-2 ml-4 flex items-center">
             <form action="/sells" method="get">
                 <div class="mb-6">
                     <label
                         for="time-filter"
                         class="inline-block text-lg mb-2"
                     >
-                        Time
+                        Time:
                     </label>
 
                     @php
@@ -41,9 +41,11 @@
                             <p class="text-red-500 text xs mt-1">{{$message}}</p>
                         @enderror
                         <button class="mx-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded py-3 px-8" >Get</button>
+
                     </div>
                 </div>
             </form>
+            <h2 class="text-xl font-bold text-left" >Total - @money($sells->sum('unit_sum'))</h2>
         </div>
         <table id="print-table" class="display">
             <thead>
@@ -109,7 +111,6 @@
                                     </div>
                                 </td>
                             @endif
-                            
                         </tr>
                 @endforeach
             </tbody>
