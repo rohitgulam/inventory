@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
-    <title>Login | KG Transporters</title>
+    <title>Login</title>
 </head>
 <body class="bg-[#E5E5E5]">
     <div class="flex flex-col justify-center items-center h-screen">
-        <p class="font-bold text-2xl text-center py-4 ">KG Transporters</p>
+        <p class="font-bold text-2xl text-center py-4 "></p>
         <div class="border rounded-md border-2 p-6 bg-slate-300">
             <p class="font-bold text-2xl text-center">LOGIN</p>
             <form action="/user/authenticate" method="post">
