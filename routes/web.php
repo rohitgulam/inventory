@@ -125,10 +125,10 @@ Route::get('reports', [AccountController::class, 'index'])->middleware('auth');
 
 // AUTH ROUTES
 // Show register view
-Route::get('/register', [UserController::class, 'create']);
+Route::get('/register', [UserController::class, 'create'])->middleware('auth');
 
 // Create new user
-Route::post('/users', [UserController::class, 'store']);
+Route::post('/users', [UserController::class, 'store'])->middleware('auth');
 
 // Show login form
 Route::get('/login', [UserController::class, 'index'])->name('login')->middleware('guest');
