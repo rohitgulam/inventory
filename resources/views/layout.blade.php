@@ -64,7 +64,7 @@
                                         <span class="text-sm ml-2">{{__('Credits')}}</span>
                                     </a>
                                 </li>
-                                {{ --- @if (auth()->user()->status === 1) --}}
+                                {{-- @if (auth()->user()->status === 1) --}}
                                     <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
                                         <a href="/reports" class="flex items-center py-2 px-2 w-full hover:bg-gray-100 hover:text-gray-900 rounded">
                                             <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 16 16"><title>file text</title><g stroke-width="1" stroke-linecap="round" fill="none" stroke="currentColor" stroke-miterlimit="10" class="nc-icon-wrapper" stroke-linejoin="round"><line x1="4.5" y1="11.5" x2="11.5" y2="11.5" stroke="currentColor"></line> <line x1="4.5" y1="8.5" x2="11.5" y2="8.5" stroke="currentColor"></line> <line x1="4.5" y1="5.5" x2="6.5" y2="5.5" stroke="currentColor"></line> <polygon points="9.5,0.5 1.5,0.5 1.5,15.5 14.5,15.5 14.5,5.5 "></polygon> <polyline points="9.5,0.5 9.5,5.5 14.5,5.5 "></polyline></g></svg>
@@ -77,7 +77,7 @@
                                             <span class="text-sm ml-2">{{__('Users')}}</span>
                                         </a>
                                     </li>
-                                {{ -- @endif -- }}
+                                {{-- @endif  --}}
                             </ul>
                             <div class="flex justify-center mt-48 mb-4 w-full">
                                 <div class="relative">
