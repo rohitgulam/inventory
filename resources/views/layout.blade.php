@@ -18,7 +18,7 @@
                     <div style="min-height: 100vh; position: fixed;" class="w-64 absolute sm:relative bg-gray-800 shadow md:h-full flex-col justify-between hidden sm:flex">
                         <div class="px-8">
                             <div class="h-16 w-full flex items-center">
-                                <h2 class="text-white text-2xl text center">KG Transporters</h2>
+                                <h2 class="text-white text-2xl text center">Abdallah Motors</h2>
                             </div>
                             <ul class="mt-12">
                                 <li class="flex w-full justify-between rounded text-gray-300 cursor-pointer items-center mb-4">
