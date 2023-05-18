@@ -128,7 +128,7 @@ Route::get('reports', [AccountController::class, 'index'])->middleware('auth');
 Route::get('/register', [UserController::class, 'create']);
 
 // Create new user
-Route::post('/users', [UserController::class, 'store'])->middleware('auth');
+Route::post('/users', [UserController::class, 'store']);
 
 // Show login form
 Route::get('/login', [UserController::class, 'index'])->name('login')->middleware('guest');
